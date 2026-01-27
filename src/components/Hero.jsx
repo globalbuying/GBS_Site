@@ -8,7 +8,7 @@ const Hero = () => {
 
       <div className="container hero-content">
         <h1 className="hero-title">
-          <span className="block-reveal">UK Trade Infrastructure</span>
+          <span className="block-reveal">Trade Infrastructure</span>
           <span className="block-reveal delay-1">For South African Business</span>
         </h1>
 
