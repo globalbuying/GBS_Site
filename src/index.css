@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Unbounded:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
 
 :root {
   /* Colors - Industrial Premium */
@@ -20,7 +20,7 @@
   --border: rgba(255,255,255,0.1);
 
   /* Typography */
-  --font-display: 'Unbounded', sans-serif;
+  --font-display: 'Montserrat', sans-serif;
   --font-body: 'Plus Jakarta Sans', sans-serif;
 
   /* Spacing */
