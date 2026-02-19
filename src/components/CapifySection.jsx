@@ -12,7 +12,7 @@ const CapifySection = () => {
               <span className="product-tagline">Global Financial Operations</span>
             </h2>
             <p className="product-description">
-              For businesses ready to scale. Capify establishes your dedicated UK buying office, unlocking access to global finance and hard currency reserves.
+              For businesses ready to scale. Capify establishes your dedicated UK buying office, building the offshore reserves needed to extend payment terms and strengthen your cash position.
             </p>
 
             <div className="process-box capify-box">
@@ -28,9 +28,9 @@ const CapifySection = () => {
             </div>
 
             <ul className="feature-list">
-              <li><span className="check">✓</span> <span className="text">Establish Legitimate Offshore Presence</span></li>
-              <li><span className="check">✓</span> <span className="text">Access International Trade Finance</span></li>
-              <li><span className="check">✓</span> <span className="text">Centralize FX Strategy</span></li>
+              <li><span className="check">✓</span> <span className="text">Build Legitimate Offshore Capital</span></li>
+              <li><span className="check">✓</span> <span className="text">Extend Supplier Payment Terms</span></li>
+              <li><span className="check">✓</span> <span className="text">Improve Cash Flow & Financial Flexibility</span></li>
             </ul>
 
             <a href="#contact" className="btn-learn-more capify-btn">Enquire About Capify</a>

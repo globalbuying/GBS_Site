@@ -8,13 +8,18 @@ const Hero = () => {
 
       <div className="container hero-content">
         <h1 className="hero-title">
-          <span className="block-reveal">Trade Infrastructure</span>
-          <span className="block-reveal delay-1">For South African Business</span>
+          <span className="block-reveal">Turn Your Import Structure</span>
+          <span className="block-reveal delay-1">Into a Strategic Asset</span>
         </h1>
 
-        <p className="hero-subtitle">
-          Global Buying Solutions (GBS) is a trade infrastructure company transforming how you engage with global markets.
-          Structured. Compliant. Cost-effective.
+        <div className="hero-subheadline">
+          Reduce landed costs. Build offshore reserves. Strengthen your cash position.
+        </div>
+
+        <p className="hero-body">
+          Global Buying Solutions partners with South African import business owners to redesign their trade
+          structures—lowering total import costs while creating offshore capital reserves
+          that can be deployed to extend supplier terms, protect margins, and increase financial control.
         </p>
 
         <div className="hero-actions">
@@ -79,13 +84,24 @@ const Hero = () => {
         }
         .delay-1 { animation-delay: 0.2s; }
 
-        .hero-subtitle {
-          font-size: 1.125rem;
-          color: var(--text-secondary);
-          max-width: 600px;
-          margin: 0 auto 3rem;
+        .hero-subheadline {
+          font-family: var(--font-display);
+          font-size: 1.5rem;
+          font-weight: 600;
+          color: var(--color-zarify);
+          margin-bottom: 2rem;
           opacity: 0;
           animation: fadeSlideUp 0.8s ease-out 0.4s forwards;
+        }
+
+        .hero-body {
+          font-size: 1.125rem;
+          color: var(--text-secondary);
+          max-width: 800px;
+          margin: 0 auto 3rem;
+          opacity: 0;
+          animation: fadeSlideUp 0.8s ease-out 0.6s forwards;
+          line-height: 1.6;
         }
 
         .hero-actions {
@@ -93,7 +109,7 @@ const Hero = () => {
           gap: 1.5rem;
           justify-content: center;
           opacity: 0;
-          animation: fadeSlideUp 0.8s ease-out 0.6s forwards;
+          animation: fadeSlideUp 0.8s ease-out 0.8s forwards;
         }
 
         .btn {

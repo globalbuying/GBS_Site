@@ -1,71 +1,71 @@
 import React from 'react';
 
 const ProblemSolution = () => {
-    const problems = [
-        {
-            title: "The Friction",
-            items: [
-                "Inflated Customs Duties",
-                "Unhedged Currency Risk",
-                "Limited Access to Offshore Finance",
-                "Administrative Complexity"
-            ]
-        },
-        {
-            title: "The GBS Solution",
-            items: [
-                "Structured Trade Flows",
-                "UK-Based Buying Office",
-                "Hard Currency Reserves",
-                "Automated Compliance"
-            ]
-        }
-    ];
+  const problems = [
+    {
+      title: "The Friction",
+      items: [
+        "Excessive Landed Costs",
+        "Restricted Cash Flow",
+        "Inflated Customs Duties",
+        "Unhedged Currency Risk"
+      ]
+    },
+    {
+      title: "The GBS Solution",
+      items: [
+        "Offshore Capital Reserves",
+        "Extended Supplier Terms",
+        "Landed Cost Optimization",
+        "Automated Compliance"
+      ]
+    }
+  ];
 
-    return (
-        <section className="problem-solution-section">
-            <div className="container">
-                <div className="section-header">
-                    <h2 className="section-title">The Trade Gap</h2>
-                    <p className="section-subtitle">
-                        South African importers face a volatile environment. We provide the infrastructure to bridge the gap between compliance and efficiency.
-                    </p>
-                </div>
+  return (
+    <section className="problem-solution-section">
+      <div className="container">
+        <div className="section-header">
+          <h2 className="section-title">Bridging the Capital Gap</h2>
+          <p className="section-subtitle">
+            South African importers face structural barriers to growth. We provide the trade infrastructure to transform your imports into a strategic financial asset.
+          </p>
+        </div>
 
-                <div className="comparison-grid">
-                    <div className="grid-col problem">
-                        <h3>Current Reality</h3>
-                        <ul>
-                            {problems[0].items.map((item, idx) => (
-                                <li key={idx} className="problem-item">
-                                    <span className="icon">✕</span>
-                                    {item}
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+        <div className="comparison-grid">
+          <div className="grid-col problem">
+            <h3>Current Reality</h3>
+            <ul>
+              {problems[0].items.map((item, idx) => (
+                <li key={idx} className="problem-item">
+                  <span className="icon">✕</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
 
-                    <div className="grid-divider">
-                        <div className="line"></div>
-                        <div className="arrow-box">➜</div>
-                        <div className="line"></div>
-                    </div>
+          <div className="grid-divider">
+            <div className="line"></div>
+            <div className="arrow-box">➜</div>
+            <div className="line"></div>
+          </div>
 
-                    <div className="grid-col solution">
-                        <h3>GBS Advantage</h3>
-                        <ul>
-                            {problems[1].items.map((item, idx) => (
-                                <li key={idx} className="solution-item">
-                                    <span className="icon">✓</span>
-                                    {item}
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                </div>
-            </div>
+          <div className="grid-col solution">
+            <h3>GBS Advantage</h3>
+            <ul>
+              {problems[1].items.map((item, idx) => (
+                <li key={idx} className="solution-item">
+                  <span className="icon">✓</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
 
-            <style>{`
+      <style>{`
         .problem-solution-section {
           padding: var(--section-spacing) 0;
           background: var(--bg-primary);
@@ -158,8 +158,8 @@ const ProblemSolution = () => {
           border: 1px solid var(--border);
         }
       `}</style>
-        </section>
-    );
+    </section>
+  );
 };
 
 export default ProblemSolution;
