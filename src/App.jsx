@@ -1,3 +1,4 @@
+import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import ProblemSolution from './components/ProblemSolution';
 import Technology from './components/Technology';
@@ -8,6 +9,7 @@ import ContactCTA from './components/ContactCTA';
 function App() {
   return (
     <div className="app-container">
+      <Navbar />
       <Hero />
       <ProblemSolution />
       <ZarifySection />
