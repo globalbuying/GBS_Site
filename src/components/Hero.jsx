@@ -44,18 +44,23 @@ const Hero = () => {
       <style>{`
         .hero {
           padding-top: 80px; /* Navbar height */
-          background: #F5F5F5; /* Professional light gray background */
+          background: #F5F5F5;
           color: #000;
           overflow: hidden;
+          display: flex;
+          flex-direction: column;
+          min-height: 100vh;
         }
 
         .hero__main {
+          flex: 1;
           display: grid;
           grid-template-columns: 1.1fr 1fr;
           gap: 4rem;
-          padding: 80px 2rem;
-          min-height: 60vh;
+          padding: 40px 2rem;
           align-items: center;
+          max-width: var(--max-width);
+          margin: 0 auto;
         }
 
         .hero__content {
@@ -64,21 +69,21 @@ const Hero = () => {
 
         .hero__title {
           font-family: var(--font-display);
-          font-size: clamp(2rem, 4.5vw, 3.2rem);
+          font-size: clamp(1.8rem, 4vw, 3rem);
           font-weight: 800;
-          line-height: 1.15;
-          margin-bottom: 2rem;
+          line-height: 1.1;
+          margin-bottom: 1.5rem;
           color: #111;
         }
 
         .hero__sub {
-          font-size: 1.25rem;
-          margin-bottom: 2.5rem;
+          font-size: 1.15rem;
+          margin-bottom: 2rem;
           color: #333;
         }
 
         .hero__sub p {
-          margin-bottom: 1rem;
+          margin-bottom: 0.75rem;
           font-weight: 600;
         }
 
@@ -88,7 +93,7 @@ const Hero = () => {
         }
 
         .hero__list li {
-          margin-bottom: 0.6rem;
+          margin-bottom: 0.5rem;
           position: relative;
           padding-left: 1.5rem;
           font-weight: 400;
@@ -103,19 +108,19 @@ const Hero = () => {
 
         .hero__cta {
           display: inline-block;
-          padding: 0.85rem 2.25rem;
+          padding: 0.8rem 2rem;
           border: 2px solid #000;
           background: #fff;
           color: #000;
           font-weight: 700;
           border-radius: 6px;
           transition: all 0.3s ease;
-          font-size: 1.1rem;
+          font-size: 1.05rem;
           font-family: var(--font-display);
         }
 
         .hero__cta span {
-          margin-left: 10px;
+          margin-left: 8px;
           transition: transform 0.3s ease;
           display: inline-block;
         }
@@ -130,7 +135,7 @@ const Hero = () => {
           transform: translateX(4px);
         }
 
-        /* Hero Image - Matching the grayscale professional aesthetic */
+        /* Hero Image */
         .hero__visual {
           position: relative;
           display: flex;
@@ -140,7 +145,7 @@ const Hero = () => {
 
         .hero__image-container {
           width: 100%;
-          max-width: 600px;
+          max-width: 550px;
           position: relative;
         }
 
@@ -148,28 +153,25 @@ const Hero = () => {
           width: 100%;
           height: auto;
           display: block;
-          /* If the user wants to mimic the PNG opacity/layering of the reference */
-          filter: drop-shadow(0 20px 50px rgba(0,0,0,0.1));
+          filter: drop-shadow(0 15px 35px rgba(0,0,0,0.1));
           transition: transform 0.5s ease;
         }
 
-        .hero__image:hover {
-          transform: scale(1.02);
-        }
-
-        /* Bottom Banner */
+        /* Bottom Banner - Condensed to ensure fold visibility */
         .hero__banner {
-          background: #0D212A; /* Dark premium teal */
+          background: #0D212A;
           color: #fff;
-          padding: 4.5rem 0;
+          padding: 3rem 0;
           text-align: center;
+          margin-top: auto;
         }
 
         .hero__banner p {
-          max-width: 1050px;
+          max-width: 1100px;
           margin: 0 auto;
-          font-size: 1.2rem;
-          line-height: 1.8;
+          padding: 0 2rem;
+          font-size: 1.1rem;
+          line-height: 1.7;
           opacity: 0.95;
           font-weight: 400;
         }
@@ -181,14 +183,18 @@ const Hero = () => {
         }
 
         @media (max-width: 900px) {
+          .hero {
+            height: auto;
+            min-height: auto;
+          }
           .hero__main {
             grid-template-columns: 1fr;
             text-align: center;
-            padding: 60px 2rem;
+            padding: 40px 2rem;
           }
           .hero__visual {
             order: -1;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
           }
           .hero__content {
              margin: 0 auto;
@@ -196,6 +202,9 @@ const Hero = () => {
           .hero__list {
             display: inline-block;
             text-align: left;
+          }
+          .hero__banner {
+            padding: 2.5rem 0;
           }
         }
       `}</style>
