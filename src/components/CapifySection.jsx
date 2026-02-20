@@ -91,12 +91,12 @@ const CapifySection = () => {
 
         .capify-glow {
           box-shadow: 0 0 60px -20px var(--color-capify-glow);
-          border-color: rgba(59, 130, 246, 0.2);
+          border-color: var(--color-capify-glow);
         }
         
         .capify-box {
            border-color: var(--color-capify);
-           background: rgba(59, 130, 246, 0.05);
+           background: var(--color-capify-glow);
         }
         .capify-box .process-title {
            color: var(--color-capify);

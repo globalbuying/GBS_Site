@@ -46,7 +46,7 @@ const ContactCTA = () => {
         .cta-title {
           font-size: clamp(2rem, 4vw, 3rem);
           margin-bottom: 1.5rem;
-          background: linear-gradient(to right, #fff, #94A3B8);
+          background: linear-gradient(to right, var(--gradient-heading-start), var(--gradient-heading-end));
           -webkit-background-clip: text;
           background-clip: text;
           color: transparent;
@@ -67,7 +67,7 @@ const ContactCTA = () => {
 
         .footer-bottom {
           width: 100%;
-          border-top: 1px solid rgba(255, 255, 255, 0.05);
+          border-top: 1px solid var(--border);
           padding-top: 2rem;
           color: var(--text-muted);
           font-size: 0.9rem;

@@ -46,7 +46,7 @@ const Hero = () => {
           transform: translateX(-50%);
           width: 80vw;
           height: 80vh;
-          background: radial-gradient(circle, rgba(20, 184, 166, 0.15) 0%, rgba(11, 17, 32, 0) 70%);
+          background: radial-gradient(circle, var(--ambient-glow) 0%, rgba(11, 17, 32, 0) 70%);
           z-index: 1;
           pointer-events: none;
         }
@@ -55,8 +55,8 @@ const Hero = () => {
           position: absolute;
           inset: 0;
           background-image: 
-            linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            linear-gradient(var(--hero-grid-line) 1px, transparent 1px),
+            linear-gradient(90deg, var(--hero-grid-line) 1px, transparent 1px);
           background-size: 50px 50px;
           mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
           -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
@@ -74,7 +74,7 @@ const Hero = () => {
           font-size: clamp(2.5rem, 5vw, 4.5rem);
           line-height: 1.1;
           margin-bottom: 1.5rem;
-          color: white;
+          color: var(--text-primary);
         }
 
         .block-reveal {
@@ -128,8 +128,8 @@ const Hero = () => {
           color: var(--bg-primary);
         }
         .btn-primary:hover {
-          background: white;
-          box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+          background: var(--text-primary);
+          box-shadow: 0 0 20px var(--color-zarify-glow);
           transform: translateY(-2px);
         }
 
@@ -140,7 +140,7 @@ const Hero = () => {
         }
         .btn-secondary:hover {
           border-color: var(--text-primary);
-          background: rgba(255, 255, 255, 0.05);
+          background: var(--border);
           transform: translateY(-2px);
         }
         

@@ -1,23 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
 
 :root {
-  /* Colors - Industrial Premium */
-  --bg-primary: #0B1120; /* Deepest Navy/Slate */
-  --bg-secondary: #151E32; /* Lighter Slate */
-  --bg-tertiary: #1E293B; /* Card BG */
+  /* Colors - Industrial Premium (Dark - Default) */
+  --bg-primary: #0B1120;
+  --bg-secondary: #151E32;
+  --bg-tertiary: #1E293B;
 
   --text-primary: #F8FAFC;
   --text-secondary: #94A3B8;
   --text-muted: #64748B;
 
   /* Accents */
-  --color-zarify: #14B8A6; /* Teal */
+  --color-zarify: #14B8A6;
   --color-zarify-glow: rgba(20, 184, 166, 0.4);
-  --color-capify: #3B82F6; /* Royal Blue */
+  --color-capify: #3B82F6;
   --color-capify-glow: rgba(59, 130, 246, 0.4);
-  
-  --chrome: #E2E8F0; /* Metallic accents */
-  --border: rgba(255,255,255,0.1);
+
+  --chrome: #E2E8F0;
+  --border: rgba(255, 255, 255, 0.1);
+
+  /* Navbar */
+  --navbar-bg: rgba(11, 17, 32, 0.75);
+  --navbar-bg-scrolled: rgba(11, 17, 32, 0.92);
+  --navbar-border: rgba(255, 255, 255, 0.08);
+  --navbar-shadow: rgba(0, 0, 0, 0.3);
+  --mobile-menu-bg: rgba(11, 17, 32, 0.95);
+
+  /* Gradients */
+  --gradient-heading-start: #fff;
+  --gradient-heading-end: #94A3B8;
+  --hero-grid-line: rgba(255, 255, 255, 0.03);
+  --ambient-glow: rgba(20, 184, 166, 0.15);
 
   /* Typography */
   --font-display: 'Montserrat', sans-serif;
@@ -29,8 +42,46 @@
   --max-width: 1200px;
 }
 
+/* Light Theme */
+[data-theme="light"] {
+  --bg-primary: #F5F0EB;
+  /* Eggshell white */
+  --bg-secondary: #EDE8E3;
+  /* Slightly warmer */
+  --bg-tertiary: #E5E0DB;
+  /* Card surfaces */
+
+  --text-primary: #1A1A2E;
+  /* Deep navy text */
+  --text-secondary: #4A5568;
+  --text-muted: #718096;
+
+  --color-zarify: #0D9488;
+  /* Slightly deeper teal for contrast */
+  --color-zarify-glow: rgba(13, 148, 136, 0.25);
+  --color-capify: #2563EB;
+  /* Deeper blue */
+  --color-capify-glow: rgba(37, 99, 235, 0.25);
+
+  --chrome: #334155;
+  --border: rgba(0, 0, 0, 0.1);
+
+  --navbar-bg: rgba(245, 240, 235, 0.8);
+  --navbar-bg-scrolled: rgba(245, 240, 235, 0.95);
+  --navbar-border: rgba(0, 0, 0, 0.08);
+  --navbar-shadow: rgba(0, 0, 0, 0.08);
+  --mobile-menu-bg: rgba(245, 240, 235, 0.98);
+
+  --gradient-heading-start: #1A1A2E;
+  --gradient-heading-end: #4A5568;
+  --hero-grid-line: rgba(0, 0, 0, 0.04);
+  --ambient-glow: rgba(13, 148, 136, 0.08);
+}
+
 /* Reset & Base */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -43,9 +94,15 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-display);
   font-weight: 700;
   line-height: 1.1;
@@ -75,7 +132,7 @@ button {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  background-image: linear-gradient(to right, #fff, #94A3B8);
+  background-image: linear-gradient(to right, var(--gradient-heading-start), var(--gradient-heading-end));
 }
 
 .zarify-gradient {
@@ -90,13 +147,21 @@ button {
 ::-webkit-scrollbar {
   width: 10px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--bg-primary);
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--bg-tertiary);
   border-radius: 5px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: var(--text-muted);
+}
+
+/* Light mode logo - invert for visibility */
+[data-theme="light"] .navbar__logo img {
+  filter: invert(1);
 }

@@ -116,7 +116,7 @@ const ProblemSolution = () => {
         .grid-col h3 {
           margin-bottom: 1.5rem;
           font-size: 1.25rem;
-          color: white;
+          color: var(--text-primary);
         }
 
         .grid-col ul {

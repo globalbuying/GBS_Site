@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import gbsLogo from '../assets/gbs-logo.png';
 
-const Navbar = () => {
+const Navbar = ({ theme, toggleTheme }) => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -31,19 +31,72 @@ const Navbar = () => {
           <li><a href="#zarify" onClick={(e) => handleNav(e, 'zarify')}>Zarify</a></li>
           <li><a href="#capify" onClick={(e) => handleNav(e, 'capify')}>Capify</a></li>
           <li><a href="#technology" onClick={(e) => handleNav(e, 'technology')}>Technology</a></li>
+          <li>
+            <button
+              className="navbar__theme-toggle"
+              onClick={toggleTheme}
+              aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+              title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+            >
+              {theme === 'dark' ? (
+                /* Sun icon */
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="5" />
+                  <line x1="12" y1="1" x2="12" y2="3" />
+                  <line x1="12" y1="21" x2="12" y2="23" />
+                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                  <line x1="1" y1="12" x2="3" y2="12" />
+                  <line x1="21" y1="12" x2="23" y2="12" />
+                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                </svg>
+              ) : (
+                /* Moon icon */
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                </svg>
+              )}
+            </button>
+          </li>
           <li><a href="#contact" onClick={(e) => handleNav(e, 'contact')} className="navbar__cta">Get in Touch</a></li>
         </ul>
 
         {/* Mobile Toggle */}
-        <button
-          className={`navbar__hamburger${mobileOpen ? ' open' : ''}`}
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label="Toggle menu"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        <div className="navbar__mobile-right">
+          <button
+            className="navbar__theme-toggle"
+            onClick={toggleTheme}
+            aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+          >
+            {theme === 'dark' ? (
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="5" />
+                <line x1="12" y1="1" x2="12" y2="3" />
+                <line x1="12" y1="21" x2="12" y2="23" />
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                <line x1="1" y1="12" x2="3" y2="12" />
+                <line x1="21" y1="12" x2="23" y2="12" />
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+              </svg>
+            ) : (
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+              </svg>
+            )}
+          </button>
+          <button
+            className={`navbar__hamburger${mobileOpen ? ' open' : ''}`}
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label="Toggle menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
@@ -61,7 +114,7 @@ const Navbar = () => {
           left: 0;
           right: 0;
           z-index: 1000;
-          background: rgba(11, 17, 32, 0.75);
+          background: var(--navbar-bg);
           backdrop-filter: blur(16px);
           -webkit-backdrop-filter: blur(16px);
           border-bottom: 1px solid transparent;
@@ -69,9 +122,9 @@ const Navbar = () => {
         }
 
         .navbar--scrolled {
-          background: rgba(11, 17, 32, 0.92);
-          border-bottom-color: rgba(255, 255, 255, 0.08);
-          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+          background: var(--navbar-bg-scrolled);
+          border-bottom-color: var(--navbar-border);
+          box-shadow: 0 4px 30px var(--navbar-shadow);
         }
 
         .navbar__inner {
@@ -137,6 +190,28 @@ const Navbar = () => {
           width: 100%;
         }
 
+        /* Theme Toggle */
+        .navbar__theme-toggle {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 36px;
+          height: 36px;
+          border-radius: 50%;
+          background: var(--bg-tertiary);
+          border: 1px solid var(--border);
+          color: var(--text-secondary);
+          cursor: pointer;
+          transition: all 0.3s ease;
+          padding: 0;
+        }
+        .navbar__theme-toggle:hover {
+          color: var(--color-zarify);
+          border-color: var(--color-zarify);
+          box-shadow: 0 0 12px var(--color-zarify-glow);
+          transform: rotate(15deg);
+        }
+
         /* CTA Button */
         .navbar__cta {
           padding: 0.55rem 1.25rem !important;
@@ -153,6 +228,13 @@ const Navbar = () => {
           background: var(--color-zarify) !important;
           color: var(--bg-primary) !important;
           box-shadow: 0 0 20px var(--color-zarify-glow);
+        }
+
+        /* Mobile right group */
+        .navbar__mobile-right {
+          display: none;
+          align-items: center;
+          gap: 0.75rem;
         }
 
         /* Hamburger */
@@ -197,7 +279,7 @@ const Navbar = () => {
           max-height: 0;
           overflow: hidden;
           transition: max-height 0.4s ease, padding 0.4s ease;
-          background: rgba(11, 17, 32, 0.95);
+          background: var(--mobile-menu-bg);
         }
         .navbar__mobile--open {
           max-height: 300px;
@@ -211,7 +293,7 @@ const Navbar = () => {
           text-transform: uppercase;
           color: var(--text-secondary);
           padding: 0.85rem 0;
-          border-bottom: 1px solid rgba(255,255,255,0.06);
+          border-bottom: 1px solid var(--border);
           transition: color 0.2s ease;
         }
         .navbar__mobile a:last-child {
@@ -225,6 +307,9 @@ const Navbar = () => {
         @media (max-width: 768px) {
           .navbar__links {
             display: none;
+          }
+          .navbar__mobile-right {
+            display: flex;
           }
           .navbar__hamburger {
             display: flex;
