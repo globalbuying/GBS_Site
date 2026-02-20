@@ -1,161 +1,202 @@
 import React from 'react';
+import deskmanImg from '../assets/hero-deskman.png';
 
 const Hero = () => {
   return (
-    <section className="hero-section">
-      <div className="ambient-light"></div>
-      <div className="grid-overlay"></div>
+    <section className="hero">
+      <div className="hero__main container">
+        <div className="hero__content">
+          <h1 className="hero__title">
+            The Financial Engine Fueling Lower Landed Costs and Higher Liquidity.
+          </h1>
 
-      <div className="container hero-content">
-        <h1 className="hero-title">
-          <span className="block-reveal">Turn Your Import Structure</span>
-          <span className="block-reveal delay-1">Into a Strategic Asset</span>
-        </h1>
+          <div className="hero__sub">
+            <p>We help importers to</p>
+            <ul className="hero__list">
+              <li>significantly reduce landed costs</li>
+              <li>build offshore reserves</li>
+              <li>unlock cash tied up in working capital</li>
+            </ul>
+          </div>
 
-        <div className="hero-subheadline">
-          Reduce landed costs. Build offshore reserves. Strengthen your cash position.
+          <a href="#contact" className="hero__cta">
+            Call to action <span>&gt;</span>
+          </a>
         </div>
 
-        <p className="hero-body">
-          Global Buying Solutions partners with South African import business owners to redesign their trade
-          structures—lowering total import costs while creating offshore capital reserves
-          that can be deployed to extend supplier terms, protect margins, and increase financial control.
-        </p>
+        <div className="hero__visual">
+          <div className="hero__image-container">
+            <img src={deskmanImg} alt="Business Professional working on laptop" className="hero__image" />
+          </div>
+        </div>
+      </div>
 
-        <div className="hero-actions">
-          <a href="#zarify" className="btn btn-primary glow-zarify">Explore Zarify</a>
-          <a href="#capify" className="btn btn-secondary glow-capify">Discover Capify</a>
+      <div className="hero__banner">
+        <div className="container">
+          <p>
+            Global Buying Solutions partners with South African import business owners to redesign their trade
+            structures—lowering total import costs while creating offshore capital reserves that can be
+            deployed to extend supplier terms, protect margins, and increase financial control.
+          </p>
         </div>
       </div>
 
       <style>{`
-        .hero-section {
-          position: relative;
-          min-height: 100vh;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+        .hero {
+          padding-top: 80px; /* Navbar height */
+          background: #F5F5F5; /* Professional light gray background */
+          color: #000;
           overflow: hidden;
-          padding-top: 4rem; /* For navbar space */
         }
 
-        .ambient-light {
-          position: absolute;
-          top: -20%;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 80vw;
-          height: 80vh;
-          background: radial-gradient(circle, var(--ambient-glow) 0%, rgba(11, 17, 32, 0) 70%);
-          z-index: 1;
-          pointer-events: none;
+        .hero__main {
+          display: grid;
+          grid-template-columns: 1.1fr 1fr;
+          gap: 4rem;
+          padding: 80px 2rem;
+          min-height: 60vh;
+          align-items: center;
         }
 
-        .grid-overlay {
-          position: absolute;
-          inset: 0;
-          background-image: 
-            linear-gradient(var(--hero-grid-line) 1px, transparent 1px),
-            linear-gradient(90deg, var(--hero-grid-line) 1px, transparent 1px);
-          background-size: 50px 50px;
-          mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
-          -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
-          z-index: 1;
+        .hero__content {
+          max-width: 650px;
         }
 
-        .hero-content {
-          position: relative;
-          z-index: 10;
-          text-align: center;
-          max-width: 900px;
-        }
-
-        .hero-title {
-          font-size: clamp(2.5rem, 5vw, 4.5rem);
-          line-height: 1.1;
-          margin-bottom: 1.5rem;
-          color: var(--text-primary);
-        }
-
-        .block-reveal {
-          display: block;
-          opacity: 0;
-          animation: fadeSlideUp 0.8s ease-out forwards;
-        }
-        .delay-1 { animation-delay: 0.2s; }
-
-        .hero-subheadline {
+        .hero__title {
           font-family: var(--font-display);
-          font-size: 1.5rem;
-          font-weight: 600;
-          color: var(--color-zarify);
+          font-size: clamp(2rem, 4.5vw, 3.2rem);
+          font-weight: 800;
+          line-height: 1.15;
           margin-bottom: 2rem;
-          opacity: 0;
-          animation: fadeSlideUp 0.8s ease-out 0.4s forwards;
+          color: #111;
         }
 
-        .hero-body {
-          font-size: 1.125rem;
-          color: var(--text-secondary);
-          max-width: 800px;
-          margin: 0 auto 3rem;
-          opacity: 0;
-          animation: fadeSlideUp 0.8s ease-out 0.6s forwards;
-          line-height: 1.6;
+        .hero__sub {
+          font-size: 1.25rem;
+          margin-bottom: 2.5rem;
+          color: #333;
         }
 
-        .hero-actions {
-          display: flex;
-          gap: 1.5rem;
-          justify-content: center;
-          opacity: 0;
-          animation: fadeSlideUp 0.8s ease-out 0.8s forwards;
-        }
-
-        .btn {
-          padding: 1rem 2rem;
+        .hero__sub p {
+          margin-bottom: 1rem;
           font-weight: 600;
-          font-size: 0.9rem;
-          text-transform: uppercase;
-          letter-spacing: 0.05em;
-          border-radius: 4px;
+        }
+
+        .hero__list {
+          list-style: none;
+          padding: 0;
+        }
+
+        .hero__list li {
+          margin-bottom: 0.6rem;
+          position: relative;
+          padding-left: 1.5rem;
+          font-weight: 400;
+        }
+
+        .hero__list li::before {
+          content: '-';
+          position: absolute;
+          left: 0;
+          font-weight: 600;
+        }
+
+        .hero__cta {
+          display: inline-block;
+          padding: 0.85rem 2.25rem;
+          border: 2px solid #000;
+          background: #fff;
+          color: #000;
+          font-weight: 700;
+          border-radius: 6px;
           transition: all 0.3s ease;
-          border: 1px solid transparent;
+          font-size: 1.1rem;
+          font-family: var(--font-display);
         }
 
-        .btn-primary {
-          background: var(--text-primary);
-          color: var(--bg-primary);
+        .hero__cta span {
+          margin-left: 10px;
+          transition: transform 0.3s ease;
+          display: inline-block;
         }
-        .btn-primary:hover {
-          background: var(--text-primary);
-          box-shadow: 0 0 20px var(--color-zarify-glow);
+
+        .hero__cta:hover {
+          background: #000;
+          color: #fff;
           transform: translateY(-2px);
         }
 
-        .btn-secondary {
-          background: transparent;
-          border-color: var(--text-muted);
-          color: var(--text-primary);
-        }
-        .btn-secondary:hover {
-          border-color: var(--text-primary);
-          background: var(--border);
-          transform: translateY(-2px);
-        }
-        
-        .glow-zarify:hover {
-           box-shadow: 0 0 20px var(--color-zarify-glow);
-           border-color: var(--color-zarify);
-        }
-        .glow-capify:hover {
-           box-shadow: 0 0 20px var(--color-capify-glow);
-           border-color: var(--color-capify);
+        .hero__cta:hover span {
+          transform: translateX(4px);
         }
 
-        @keyframes fadeSlideUp {
-          from { opacity: 0; transform: translateY(20px); }
-          to { opacity: 1; transform: translateY(0); }
+        /* Hero Image - Matching the grayscale professional aesthetic */
+        .hero__visual {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .hero__image-container {
+          width: 100%;
+          max-width: 600px;
+          position: relative;
+        }
+
+        .hero__image {
+          width: 100%;
+          height: auto;
+          display: block;
+          /* If the user wants to mimic the PNG opacity/layering of the reference */
+          filter: drop-shadow(0 20px 50px rgba(0,0,0,0.1));
+          transition: transform 0.5s ease;
+        }
+
+        .hero__image:hover {
+          transform: scale(1.02);
+        }
+
+        /* Bottom Banner */
+        .hero__banner {
+          background: #0D212A; /* Dark premium teal */
+          color: #fff;
+          padding: 4.5rem 0;
+          text-align: center;
+        }
+
+        .hero__banner p {
+          max-width: 1050px;
+          margin: 0 auto;
+          font-size: 1.2rem;
+          line-height: 1.8;
+          opacity: 0.95;
+          font-weight: 400;
+        }
+
+        @media (max-width: 1024px) {
+          .hero__main {
+            gap: 2rem;
+          }
+        }
+
+        @media (max-width: 900px) {
+          .hero__main {
+            grid-template-columns: 1fr;
+            text-align: center;
+            padding: 60px 2rem;
+          }
+          .hero__visual {
+            order: -1;
+            margin-bottom: 3rem;
+          }
+          .hero__content {
+             margin: 0 auto;
+          }
+          .hero__list {
+            display: inline-block;
+            text-align: left;
+          }
         }
       `}</style>
     </section>

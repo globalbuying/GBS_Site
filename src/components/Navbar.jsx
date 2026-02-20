@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import gbsLogo from '../assets/logodm.png';
+import logoGreen from '../assets/logo-green.png';
+import logoWhite from '../assets/logo-white.png';
 
 const Navbar = ({ theme, toggleTheme }) => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  const currentLogo = theme === 'light' ? logoGreen : logoWhite;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -23,7 +26,7 @@ const Navbar = ({ theme, toggleTheme }) => {
       <div className="navbar__inner container">
         {/* Logo */}
         <a href="#" className="navbar__logo" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
-          <img src={gbsLogo} alt="Global Buying Solutions" />
+          <img src={currentLogo} alt="Global Buying Solutions" />
         </a>
 
         {/* Desktop Links */}

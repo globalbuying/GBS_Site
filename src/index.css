@@ -143,6 +143,133 @@ button {
   background-image: linear-gradient(135deg, #3B82F6, #60a5fa);
 }
 
+/* ── Shared Product Section Styles ── */
+.product-section {
+  padding: var(--section-spacing) 0;
+  position: relative;
+}
+
+.product-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .product-layout {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .process-box {
+    text-align: left;
+  }
+}
+
+.product-title {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-tagline {
+  font-size: 0.5em;
+  color: var(--text-muted);
+  font-family: var(--font-body);
+  margin-top: 0.5rem;
+}
+
+.product-description {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  max-width: 500px;
+}
+
+.process-box {
+  background: rgba(20, 184, 166, 0.05);
+  border-left: 3px solid var(--color-zarify);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 0 8px 8px 0;
+}
+
+.process-title {
+  color: var(--color-zarify);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.9rem;
+}
+
+.process-step {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+  align-items: baseline;
+}
+
+.process-step:last-child {
+  margin-bottom: 0;
+}
+
+.step-number {
+  font-family: var(--font-display);
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.feature-list {
+  list-style: none;
+  margin: 0 0 2rem 0;
+}
+
+.feature-list li {
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+.check {
+  color: var(--color-zarify);
+  font-weight: bold;
+}
+
+.btn-learn-more {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: all 0.3s;
+  color: var(--bg-primary);
+  text-align: center;
+}
+
+.image-wrapper {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(20, 184, 166, 0.2);
+  position: relative;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.image-wrapper:hover img {
+  transform: scale(1.03);
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;

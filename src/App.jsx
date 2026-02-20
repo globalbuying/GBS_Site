@@ -3,7 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import ProblemSolution from './components/ProblemSolution';
 import Technology from './components/Technology';
-import ZarifySection from './components/ZarifySection';
+import ZarifyDeepDive from './components/ZarifyDeepDive';
 import CapifySection from './components/CapifySection';
 import ContactCTA from './components/ContactCTA';
 
@@ -26,7 +26,7 @@ function App() {
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <Hero />
       <ProblemSolution />
-      <ZarifySection />
+      <ZarifyDeepDive />
       <Technology />
       <CapifySection />
       <ContactCTA />
