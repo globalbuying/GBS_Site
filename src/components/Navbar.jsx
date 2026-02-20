@@ -27,6 +27,7 @@ const Navbar = ({ theme, toggleTheme }) => {
         {/* Logo */}
         <a href="#" className="navbar__logo" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
           <img src={currentLogo} alt="Global Buying Solutions" />
+          <span className="navbar__logo-text">Global Buying Solutions Limited</span>
         </a>
 
         {/* Desktop Links */}
@@ -151,6 +152,26 @@ const Navbar = ({ theme, toggleTheme }) => {
           height: 55px;
           width: auto;
           display: block;
+        }
+        .navbar__logo-text {
+          margin-left: 1.25rem;
+          font-family: var(--font-display);
+          font-size: 1.05rem;
+          font-weight: 600;
+          color: var(--text-primary);
+          letter-spacing: 0.02em;
+          white-space: nowrap;
+        }
+        @media (max-width: 900px) {
+          .navbar__logo-text {
+            font-size: 0.9rem;
+            margin-left: 0.75rem;
+          }
+        }
+        @media (max-width: 600px) {
+          .navbar__logo-text {
+            display: none;
+          }
         }
 
         /* Desktop Links */
