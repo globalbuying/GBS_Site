@@ -13,7 +13,7 @@ const ContactCTA = () => {
         </p>
 
         <button
-          className="btn-primary cta-btn"
+          className="cta-btn"
           onClick={() => setIsModalOpen(true)}
         >
           Get In Touch
@@ -60,9 +60,29 @@ const ContactCTA = () => {
         }
 
         .cta-btn {
-          padding: 1rem 3rem;
-          font-size: 1.1rem;
+          display: inline-block;
+          padding: 1.1rem 3.5rem;
+          font-size: 1.15rem;
+          font-weight: 700;
+          background: var(--color-capify);
+          color: #FFFFFF; /* High contrast white text for both modes */
+          border-radius: 6px;
+          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          font-family: var(--font-display);
+          box-shadow: 0 10px 25px -5px var(--color-capify-glow);
           margin-bottom: 6rem;
+          cursor: pointer;
+        }
+
+        .cta-btn:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 20px 35px -10px var(--color-capify-glow);
+          filter: brightness(1.1);
+          color: #FFFFFF;
+        }
+
+        .cta-btn:active {
+          transform: translateY(-1px);
         }
 
         .footer-bottom {
