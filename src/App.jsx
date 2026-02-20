@@ -1,15 +1,13 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import ProblemSolution from './components/ProblemSolution';
-import Technology from './components/Technology';
-import ZarifyDeepDive from './components/ZarifyDeepDive';
-import CapifySection from './components/CapifySection';
-import ContactCTA from './components/ContactCTA';
+import HomePage from './pages/HomePage';
+import ZarifyPage from './pages/ZarifyPage';
+import CapifyPage from './pages/CapifyPage';
 
 function App() {
   const [theme, setTheme] = useState(() => {
-    return localStorage.getItem('gbs-theme') || 'dark';
+    return localStorage.getItem('gbs-theme') || 'light';
   });
 
   useEffect(() => {
@@ -22,15 +20,16 @@ function App() {
   };
 
   return (
-    <div className="app-container">
-      <Navbar theme={theme} toggleTheme={toggleTheme} />
-      <Hero />
-      <ProblemSolution />
-      <ZarifyDeepDive />
-      <Technology />
-      <CapifySection />
-      <ContactCTA />
-    </div>
+    <Router>
+      <div className="app">
+        <Navbar theme={theme} toggleTheme={toggleTheme} />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/zarify" element={<ZarifyPage />} />
+          <Route path="/capify" element={<CapifyPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

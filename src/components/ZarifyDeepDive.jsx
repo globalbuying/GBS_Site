@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import zarifyImg from '../assets/zarify.png';
 
 const FAQItem = ({ question, answer }) => {
@@ -207,7 +208,7 @@ const ZarifyDeepDive = () => {
                 Zarify is your on-ramp—solving immediate inefficiencies and lowering costs. As your business grows in scale and complexity, we offer a strategic upgrade to <strong className="capify-accent">Capify</strong>, helping you establish your own dedicated offshore buying office to build hard currency reserves and access global finance.
               </p>
             </div>
-            <a href="#capify" className="btn-learn-more zdd-pathway-btn">Discover Capify →</a>
+            <Link to="/capify" className="btn-learn-more zdd-pathway-btn">Discover Capify →</Link>
           </div>
         </div>
       </div>

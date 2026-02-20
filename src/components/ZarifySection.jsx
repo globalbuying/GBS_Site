@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import zarifyImg from '../assets/zarify.png';
 
 const ZarifySection = () => {
@@ -8,36 +9,20 @@ const ZarifySection = () => {
         <div className="product-layout">
           <div className="product-content">
             <h2 className="product-title">
-              <span className="zarify-text">Zarify</span>
-              <span className="product-tagline">Intelligent Procurement</span>
+              <span className="zarify-title-text">Zarify</span>
+              <span className="product-tagline">Optimise Procurement</span>
             </h2>
             <p className="product-description">
               The gateway to compliant, cost-effective global trade. Zarify empowers South African importers to settle foreign invoices in ZAR while optimizing customs and compliance.
             </p>
 
-            <div className="process-box">
-              <h4 className="process-title">How It Works</h4>
-              <div className="process-step">
-                <span className="step-number">01</span>
-                <p>We invoice your local entity in ZAR.</p>
-              </div>
-              <div className="process-step">
-                <span className="step-number">02</span>
-                <p>We settle your foreign supplier in their currency.</p>
-              </div>
-              <div className="process-step">
-                <span className="step-number">03</span>
-                <p>Goods ship directly to you, fully compliant.</p>
-              </div>
-            </div>
-
-            <ul className="feature-list">
-              <li><span className="check">✓</span> <span className="text">Avoid SARS Exchange Rate Uplifts</span></li>
-              <li><span className="check">✓</span> <span className="text">Simplify Foreign Payments</span></li>
-              <li><span className="check">✓</span> <span className="text">No Extensive KYC Required</span></li>
+            <ul className="summary-benefits">
+              <li><span className="bullet-check">✓</span> Avoid SARS Exchange Rate Uplifts</li>
+              <li><span className="bullet-check">✓</span> Simplify ZAR-Based Settlements</li>
+              <li><span className="bullet-check">✓</span> Streamlined Compliance & KYC</li>
             </ul>
 
-            <a href="#contact" className="btn-learn-more zarify-btn">Enquire About Zarify</a>
+            <Link to="/zarify" className="btn-learn-more zarify-btn">Learn More About Zarify</Link>
           </div>
 
           <div className="product-visual">
@@ -70,9 +55,6 @@ const ZarifySection = () => {
             grid-template-columns: 1fr;
             text-align: center;
           }
-           .process-box {
-            text-align: left;
-           }
         }
 
         .product-title {
@@ -82,8 +64,8 @@ const ZarifySection = () => {
           flex-direction: column;
         }
 
-        .zarify-text {
-          color: var(--color-zarify);
+        .zarify-title-text {
+          color: var(--color-capify); /* Unify with Capify blue */
         }
 
         .product-tagline {
@@ -96,56 +78,28 @@ const ZarifySection = () => {
         .product-description {
           font-size: 1.1rem;
           color: var(--text-secondary);
-          margin-bottom: 2rem;
+          margin-bottom: 1.5rem;
           max-width: 500px;
         }
-        
-        .process-box {
-          background: rgba(20, 184, 166, 0.05);
-          border-left: 3px solid var(--color-zarify);
-          padding: 1.5rem;
-          margin-bottom: 2rem;
-          border-radius: 0 8px 8px 0;
-        }
-        
-        .process-title {
-          color: var(--color-zarify);
-          margin-bottom: 1rem;
-          text-transform: uppercase;
-          letter-spacing: 0.05em;
-          font-size: 0.9rem;
-        }
-        
-        .process-step {
-          display: flex;
-          gap: 1rem;
-          margin-bottom: 0.8rem;
-          align-items: baseline;
-        }
-        .process-step:last-child { margin-bottom: 0; }
-        
-        .step-number {
-          font-family: var(--font-display);
-          color: var(--text-muted);
-          font-size: 0.8rem;
-        }
 
-        .feature-list {
+        .summary-benefits {
           list-style: none;
+          padding: 0;
           margin: 0 0 2rem 0;
         }
 
-        .feature-list li {
-          margin-bottom: 0.8rem;
+        .summary-benefits li {
           display: flex;
           align-items: center;
-          gap: 1rem;
-          font-size: 1rem;
+          gap: 0.75rem;
+          margin-bottom: 0.75rem;
           color: var(--text-secondary);
+          font-size: 0.95rem;
+          font-weight: 500;
         }
 
-        .check {
-          color: var(--color-zarify);
+        .bullet-check {
+          color: var(--color-capify);
           font-weight: bold;
         }
 
@@ -156,18 +110,19 @@ const ZarifySection = () => {
           font-weight: 600;
           border-radius: 4px;
           transition: all 0.3s;
-          color: var(--bg-primary);
+          color: white;
           text-align: center;
+          text-decoration: none;
         }
 
         .zarify-btn {
-          background: var(--color-zarify);
-          box-shadow: 0 4px 20px var(--color-zarify-glow);
+          background: var(--color-capify); /* match unified blue */
+          box-shadow: 0 4px 20px var(--color-capify-glow);
         }
 
         .zarify-btn:hover {
           transform: translateY(-2px);
-          box-shadow: 0 8px 30px var(--color-zarify-glow);
+          box-shadow: 0 8px 30px var(--color-capify-glow);
           filter: brightness(1.1);
         }
 
@@ -175,7 +130,7 @@ const ZarifySection = () => {
           width: 100%;
           border-radius: 16px;
           overflow: hidden;
-          border: 1px solid rgba(20, 184, 166, 0.2);
+          border: 1px solid rgba(59, 130, 246, 0.2);
           position: relative;
         }
         
@@ -191,7 +146,7 @@ const ZarifySection = () => {
         }
         
         .zarify-glow {
-           box-shadow: 0 0 60px -20px var(--color-zarify-glow);
+           box-shadow: 0 0 60px -20px var(--color-capify-glow);
         }
       `}</style>
     </section>

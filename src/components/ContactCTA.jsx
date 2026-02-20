@@ -7,7 +7,7 @@ const ContactCTA = () => {
   return (
     <footer id="contact" className="contact-section">
       <div className="container center-content">
-        <h2 className="cta-title">Ready to transform your import structure?</h2>
+        <h2 className="cta-title">Ready to build Hard Currency Reserves You Control?</h2>
         <p className="cta-description">
           Join leading businesses transforming their global engagement with Global Buying Solutions.
         </p>

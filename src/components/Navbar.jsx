@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logoForLight from '../assets/logo-for-light.png';
 import logoForDark from '../assets/logo-for-dark.png';
 
 const Navbar = ({ theme, toggleTheme }) => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
-  const currentLogo = theme === 'light' ? logoForLight : logoForDark;
+  // Force dark logo (white version) for the permanent dark navbar
+  const currentLogo = logoForDark;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -17,23 +21,37 @@ const Navbar = ({ theme, toggleTheme }) => {
   const handleNav = (e, id) => {
     e.preventDefault();
     setMobileOpen(false);
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    if (location.pathname !== '/') {
+      // If not on home page, navigate home first then jump to ID
+      navigate('/#' + id);
+      // Let the home page handle the scroll on mount if we want, 
+      // but standard anchor jump is usually handled by browser if we use /#id
+      // For smoother effect we can manually scroll after navigation
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    } else {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   };
 
   return (
     <nav className={`navbar${scrolled ? ' navbar--scrolled' : ''}`}>
       <div className="navbar__inner container">
         {/* Logo */}
-        <a href="#" className="navbar__logo" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
+        <Link to="/" className="navbar__logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
           <img src={currentLogo} alt="Global Buying Solutions" />
           <span className="navbar__logo-text">Global Buying Solutions Limited</span>
-        </a>
+        </Link>
 
         {/* Desktop Links */}
         <ul className="navbar__links">
-          <li><a href="#zarify" onClick={(e) => handleNav(e, 'zarify')}>Zarify</a></li>
-          <li><a href="#capify" onClick={(e) => handleNav(e, 'capify')}>Capify</a></li>
+          <li><Link to="/" onClick={() => { setMobileOpen(false); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>Home</Link></li>
+          <li><Link to="/zarify" onClick={() => setMobileOpen(false)}>Zarify</Link></li>
+          <li><Link to="/capify" onClick={() => setMobileOpen(false)}>Capify</Link></li>
           <li><a href="#technology" onClick={(e) => handleNav(e, 'technology')}>Technology</a></li>
           <li>
             <button
@@ -105,8 +123,9 @@ const Navbar = ({ theme, toggleTheme }) => {
 
       {/* Mobile Menu */}
       <div className={`navbar__mobile${mobileOpen ? ' navbar__mobile--open' : ''}`}>
-        <a href="#zarify" onClick={(e) => handleNav(e, 'zarify')}>Zarify</a>
-        <a href="#capify" onClick={(e) => handleNav(e, 'capify')}>Capify</a>
+        <Link to="/" onClick={() => { setMobileOpen(false); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>Home</Link>
+        <Link to="/zarify" onClick={() => setMobileOpen(false)}>Zarify</Link>
+        <Link to="/capify" onClick={() => setMobileOpen(false)}>Capify</Link>
         <a href="#technology" onClick={(e) => handleNav(e, 'technology')}>Technology</a>
         <a href="#contact" onClick={(e) => handleNav(e, 'contact')} className="navbar__cta">Get in Touch</a>
       </div>
@@ -118,7 +137,8 @@ const Navbar = ({ theme, toggleTheme }) => {
           left: 0;
           right: 0;
           z-index: 1000;
-          background: var(--navbar-bg);
+          /* Forced Dark Aesthetic */
+          background: rgba(11, 17, 32, 0.75);
           backdrop-filter: blur(16px);
           -webkit-backdrop-filter: blur(16px);
           border-bottom: 1px solid transparent;
@@ -126,9 +146,9 @@ const Navbar = ({ theme, toggleTheme }) => {
         }
 
         .navbar--scrolled {
-          background: var(--navbar-bg-scrolled);
-          border-bottom-color: var(--navbar-border);
-          box-shadow: 0 4px 30px var(--navbar-shadow);
+          background: rgba(11, 17, 32, 0.92);
+          border-bottom-color: rgba(255, 255, 255, 0.08);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
         }
 
         .navbar__inner {
@@ -158,7 +178,7 @@ const Navbar = ({ theme, toggleTheme }) => {
           font-family: var(--font-display);
           font-size: 1.05rem;
           font-weight: 600;
-          color: var(--text-primary);
+          color: #F8FAFC; /* Dark mode text primary */
           letter-spacing: 0.02em;
           white-space: nowrap;
         }
@@ -190,7 +210,7 @@ const Navbar = ({ theme, toggleTheme }) => {
           font-weight: 500;
           letter-spacing: 0.04em;
           text-transform: uppercase;
-          color: var(--text-secondary);
+          color: #94A3B8; /* Dark mode text secondary */
           transition: color 0.25s ease;
           position: relative;
         }
@@ -202,13 +222,13 @@ const Navbar = ({ theme, toggleTheme }) => {
           bottom: -4px;
           width: 0;
           height: 2px;
-          background: var(--color-zarify);
+          background: #3B82F6; /* Fixed Blue Accent */
           transition: width 0.3s ease;
           border-radius: 1px;
         }
 
         .navbar__links a:hover {
-          color: var(--text-primary);
+          color: #F8FAFC; /* Dark mode text primary */
         }
         .navbar__links a:hover::after {
           width: 100%;
@@ -222,26 +242,26 @@ const Navbar = ({ theme, toggleTheme }) => {
           width: 36px;
           height: 36px;
           border-radius: 50%;
-          background: var(--bg-tertiary);
-          border: 1px solid var(--border);
-          color: var(--text-secondary);
+          background: #1E293B; /* Dark mode bg tertiary */
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          color: #94A3B8;
           cursor: pointer;
           transition: all 0.3s ease;
           padding: 0;
         }
         .navbar__theme-toggle:hover {
-          color: var(--color-zarify);
-          border-color: var(--color-zarify);
-          box-shadow: 0 0 12px var(--color-zarify-glow);
+          color: #3B82F6;
+          border-color: #3B82F6;
+          box-shadow: 0 0 12px rgba(59, 130, 246, 0.4);
           transform: rotate(15deg);
         }
 
         /* CTA Button */
         .navbar__cta {
           padding: 0.55rem 1.25rem !important;
-          border: 1px solid var(--color-zarify) !important;
+          border: 1px solid #3B82F6 !important;
           border-radius: 4px;
-          color: var(--color-zarify) !important;
+          color: #3B82F6 !important;
           font-weight: 600 !important;
           transition: all 0.3s ease !important;
         }
@@ -249,9 +269,9 @@ const Navbar = ({ theme, toggleTheme }) => {
           display: none !important;
         }
         .navbar__cta:hover {
-          background: var(--color-zarify) !important;
-          color: var(--bg-primary) !important;
-          box-shadow: 0 0 20px var(--color-zarify-glow);
+          background: #3B82F6 !important;
+          color: #0B1120 !important;
+          box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
         }
 
         /* Mobile right group */
@@ -279,7 +299,7 @@ const Navbar = ({ theme, toggleTheme }) => {
           display: block;
           width: 100%;
           height: 2px;
-          background: var(--text-primary);
+          background: #F8FAFC;
           border-radius: 2px;
           transition: all 0.3s ease;
           transform-origin: center;
@@ -303,7 +323,7 @@ const Navbar = ({ theme, toggleTheme }) => {
           max-height: 0;
           overflow: hidden;
           transition: max-height 0.4s ease, padding 0.4s ease;
-          background: var(--mobile-menu-bg);
+          background: rgba(11, 17, 32, 0.95);
         }
         .navbar__mobile--open {
           max-height: 300px;
@@ -315,16 +335,16 @@ const Navbar = ({ theme, toggleTheme }) => {
           font-weight: 500;
           letter-spacing: 0.04em;
           text-transform: uppercase;
-          color: var(--text-secondary);
+          color: #94A3B8;
           padding: 0.85rem 0;
-          border-bottom: 1px solid var(--border);
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
           transition: color 0.2s ease;
         }
         .navbar__mobile a:last-child {
           border-bottom: none;
         }
         .navbar__mobile a:hover {
-          color: var(--text-primary);
+          color: #F8FAFC;
         }
 
         /* Responsive */

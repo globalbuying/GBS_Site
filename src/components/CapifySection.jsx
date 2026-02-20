@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import capifyImg from '../assets/capify.png';
 
 const CapifySection = () => {
@@ -33,7 +34,7 @@ const CapifySection = () => {
               <li><span className="check">✓</span> <span className="text">Improve Cash Flow & Financial Flexibility</span></li>
             </ul>
 
-            <a href="#contact" className="btn-learn-more capify-btn">Enquire About Capify</a>
+            <Link to="/capify" className="btn-learn-more capify-btn">Learn More About Capify</Link>
           </div>
 
           <div className="product-visual">
