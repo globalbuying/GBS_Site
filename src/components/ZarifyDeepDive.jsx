@@ -256,7 +256,7 @@ const ZarifyDeepDive = () => {
           flex-direction: column;
         }
         .zarify-text {
-          color: var(--color-zarify);
+          color: var(--color-capify);
         }
         .zdd-hero-tagline {
           font-size: 0.5em;
@@ -293,7 +293,7 @@ const ZarifyDeepDive = () => {
           color: var(--text-secondary);
         }
         .zdd-check {
-          color: var(--color-zarify);
+          color: var(--color-capify);
           font-weight: bold;
         }
 
@@ -302,7 +302,7 @@ const ZarifyDeepDive = () => {
           width: 100%;
           border-radius: 16px;
           overflow: hidden;
-          border: 1px solid rgba(20, 184, 166, 0.2);
+          border: 1px solid var(--border);
           position: relative;
         }
         .zdd-image-wrapper img {
@@ -315,16 +315,16 @@ const ZarifyDeepDive = () => {
           transform: scale(1.03);
         }
         .zarify-glow {
-          box-shadow: 0 0 60px -20px var(--color-zarify-glow);
+          box-shadow: 0 0 60px -20px var(--color-capify-glow);
         }
 
         .zarify-btn {
-          background: var(--color-zarify);
-          box-shadow: 0 4px 20px var(--color-zarify-glow);
+          background: var(--color-capify);
+          box-shadow: 0 4px 20px var(--color-capify-glow);
         }
         .zarify-btn:hover {
           transform: translateY(-2px);
-          box-shadow: 0 8px 30px var(--color-zarify-glow);
+          box-shadow: 0 8px 30px var(--color-capify-glow);
           filter: brightness(1.1);
         }
 
@@ -332,7 +332,7 @@ const ZarifyDeepDive = () => {
         .zdd-section-heading {
           font-size: clamp(1.5rem, 3vw, 2rem);
           margin-bottom: 0.75rem;
-          color: var(--color-zarify);
+          color: var(--color-capify);
         }
         .zdd-sub-heading {
           font-size: 1.15rem;
@@ -376,13 +376,14 @@ const ZarifyDeepDive = () => {
 
         /* ── Callout card ── */
         .zdd-callout-card {
-          background: rgba(20, 184, 166, 0.06);
-          border-left: 3px solid var(--color-zarify);
+          background: var(--color-capify-glow);
+          border-left: 3px solid var(--color-capify);
           border-radius: 0 10px 10px 0;
           padding: 2rem;
           display: flex;
           gap: 1rem;
           align-items: flex-start;
+          opacity: 0.8;
         }
         .zdd-callout-icon {
           font-size: 1.5rem;
@@ -390,12 +391,12 @@ const ZarifyDeepDive = () => {
           margin-top: 2px;
         }
         .zdd-callout-card p {
-          color: var(--text-secondary);
+          color: var(--text-primary);
           line-height: 1.7;
           font-size: 1rem;
         }
         .zdd-callout-card strong {
-          color: var(--color-zarify);
+          color: var(--color-capify);
         }
 
         /* ── Stat badge ── */
@@ -405,21 +406,21 @@ const ZarifyDeepDive = () => {
           align-items: center;
           justify-content: center;
           text-align: center;
-          background: linear-gradient(145deg, rgba(20,184,166,0.12) 0%, rgba(20,184,166,0.04) 100%);
-          border: 1px solid rgba(20,184,166,0.25);
+          background: linear-gradient(145deg, rgba(59, 130, 246, 0.12) 0%, rgba(59, 130, 246, 0.04) 100%);
+          border: 1px solid var(--color-capify-glow);
           border-radius: 16px;
           padding: 3rem 2rem;
           transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .zdd-stat-badge:hover {
           transform: translateY(-4px);
-          box-shadow: 0 12px 40px var(--color-zarify-glow);
+          box-shadow: 0 12px 40px var(--color-capify-glow);
         }
         .zdd-stat-number {
           font-family: var(--font-display);
           font-size: clamp(3rem, 6vw, 4.5rem);
           font-weight: 700;
-          color: var(--color-zarify);
+          color: var(--color-capify);
           line-height: 1;
           margin-bottom: 0.75rem;
         }
@@ -462,14 +463,14 @@ const ZarifyDeepDive = () => {
         }
         .zdd-step-card:hover {
           transform: translateY(-4px);
-          border-color: var(--color-zarify);
+          border-color: var(--color-capify);
         }
         .zdd-step-num {
           display: inline-block;
           font-family: var(--font-display);
           font-size: 0.8rem;
-          color: var(--color-zarify);
-          border: 1px solid var(--color-zarify);
+          color: var(--color-capify);
+          border: 1px solid var(--color-capify);
           border-radius: 4px;
           padding: 0.15rem 0.5rem;
           margin-bottom: 1rem;
@@ -507,13 +508,13 @@ const ZarifyDeepDive = () => {
         }
         .zdd-metric-card:hover {
           transform: translateY(-4px);
-          border-color: var(--color-zarify);
+          border-color: var(--color-capify);
         }
         .zdd-metric-value {
           font-family: var(--font-display);
           font-size: 1.6rem;
           font-weight: 700;
-          color: var(--color-zarify);
+          color: var(--color-capify);
           margin-bottom: 0.5rem;
         }
         .zdd-metric-label {
@@ -537,7 +538,7 @@ const ZarifyDeepDive = () => {
         }
         .zdd-faq-item:hover,
         .zdd-faq-item.open {
-          border-color: var(--color-zarify);
+          border-color: var(--color-capify);
         }
         .zdd-faq-q {
           display: flex;
@@ -551,7 +552,7 @@ const ZarifyDeepDive = () => {
         }
         .zdd-faq-chevron {
           font-size: 1.4rem;
-          color: var(--color-zarify);
+          color: var(--color-capify);
           flex-shrink: 0;
           margin-left: 1rem;
           transition: transform 0.3s ease;
