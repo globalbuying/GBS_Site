@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import gbsLogo from '../assets/gbs-logo.png';
+import gbsLogo from '../assets/logodm.png';
 
 const Navbar = ({ theme, toggleTheme }) => {
   const [scrolled, setScrolled] = useState(false);
@@ -145,7 +145,7 @@ const Navbar = ({ theme, toggleTheme }) => {
           opacity: 0.85;
         }
         .navbar__logo img {
-          height: 50px;
+          height: 55px;
           width: auto;
           display: block;
         }
@@ -318,7 +318,7 @@ const Navbar = ({ theme, toggleTheme }) => {
             display: flex;
           }
           .navbar__logo img {
-            height: 34px;
+            height: 38px;
           }
         }
       `}</style>

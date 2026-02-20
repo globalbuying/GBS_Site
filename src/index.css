@@ -160,8 +160,3 @@ button {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--text-muted);
 }
-
-/* Light mode logo - invert for visibility */
-[data-theme="light"] .navbar__logo img {
-  filter: invert(1);
-}
