@@ -20,7 +20,7 @@ const Hero = () => {
           </div>
 
           <a href="#contact" className="hero__cta">
-            Call to action <span>&gt;</span>
+            Explore GBS Solutions <span>&gt;</span>
           </a>
         </div>
 
@@ -44,8 +44,8 @@ const Hero = () => {
       <style>{`
         .hero {
           padding-top: 80px; /* Navbar height */
-          background: #F5F5F5;
-          color: #000;
+          background: var(--bg-primary);
+          color: var(--text-primary);
           overflow: hidden;
           display: flex;
           flex-direction: column;
@@ -73,13 +73,13 @@ const Hero = () => {
           font-weight: 800;
           line-height: 1.1;
           margin-bottom: 1.5rem;
-          color: #111;
+          color: var(--text-primary);
         }
 
         .hero__sub {
           font-size: 1.15rem;
           margin-bottom: 2rem;
-          color: #333;
+          color: var(--text-secondary);
         }
 
         .hero__sub p {

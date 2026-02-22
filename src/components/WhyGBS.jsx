@@ -8,7 +8,7 @@ const WhyGBS = () => {
         <div className="why-gbs__header">
           <h2 className="why-gbs__title">Why Importers Partner with GBS</h2>
           <p className="why-gbs__intro">
-            Importing into South Africa comes with structural challenges that quietly inflate costs, drain cash flow, and limit access to offshore capital. GBS was created to solve these systemic issues—giving importers a financial engine that reduces landed costs, builds offshore reserves, and unlocks cash trapped in working capital. GBS removes these obstacles by addressing challenges such as:
+            South African trade is hindered by structural inefficiencies that drain cash flow. GBS provides the infrastructure to bridge these gaps—refining trade structures to protect margins and build global leverage.
           </p>
         </div>
 
@@ -61,7 +61,7 @@ const WhyGBS = () => {
               </div>
               <div className="why-gbs__block">
                 <h4>Solution</h4>
-                <p>Enable suppliers to invoice and be paid in their local currency eliminates the need for them to uplift their invoices.</p>
+                <p>Enable suppliers to invoice and receive payment in their local currency, eliminating the need for them to uplift invoices to mitigate USD volatility.</p>
               </div>
             </div>
             <Link to="/yuanify" className="btn-learn-more why-gbs__cta yuanify-card-btn">Learn more about Yuanify</Link>

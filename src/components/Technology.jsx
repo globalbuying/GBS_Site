@@ -4,7 +4,7 @@ const techSteps = [
   {
     num: '01',
     title: 'Analyse & Calculate',
-    body: 'Our FX engine and landed cost calculator determine the optimal settlement path for each specific invoice, identifying hidden costs and maximizing efficiency before the shipment even leafes origin.'
+    body: 'Our FX engine and landed cost calculator determine the optimal settlement path for each specific invoice, identifying hidden costs and maximizing efficiency before the shipment even leaves origin.'
   },
   {
     num: '02',
