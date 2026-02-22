@@ -496,14 +496,16 @@ const CapifyDeepDive = () => {
         .cdd-pathway-text .cdd-body { margin-top: 0.5rem; }
         .cdd-pathway-btn {
           background: var(--color-capify) !important;
+          border: 1px solid rgba(255, 255, 255, 0.15);
           box-shadow: 0 4px 20px var(--color-capify-glow);
           flex-shrink: 0;
           white-space: nowrap;
         }
         .cdd-pathway-btn:hover {
           transform: translateY(-2px);
+          border-color: rgba(255, 255, 255, 0.4);
           box-shadow: 0 8px 30px var(--color-capify-glow);
-          filter: brightness(1.1);
+          filter: brightness(1.2);
         }
 
         /* ── Backgrounds ── */
@@ -526,12 +528,14 @@ const CapifyDeepDive = () => {
         }
         .capify-btn {
           background: var(--color-capify);
+          border: 1px solid rgba(255, 255, 255, 0.15);
           box-shadow: 0 4px 20px var(--color-capify-glow);
         }
         .capify-btn:hover {
           transform: translateY(-2px);
+          border-color: rgba(255, 255, 255, 0.4);
           box-shadow: 0 8px 30px var(--color-capify-glow);
-          filter: brightness(1.1);
+          filter: brightness(1.2);
         }
 
         /* ── CTA ── */
