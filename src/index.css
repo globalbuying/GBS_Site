@@ -10,13 +10,15 @@
   --text-secondary: #94A3B8;
   --text-muted: #64748B;
 
-  /* Accents */
+  /* Accents - Adjusted for Dark Mode Contrast */
   --color-zarify: #BD4B16;
-  --color-zarify-glow: rgba(189, 75, 22, 0.4);
-  --color-capify: #0F2B48;
-  --color-capify-glow: rgba(15, 43, 72, 0.4);
-  --color-yuanify: #2D5A27;
-  --color-yuanify-glow: rgba(45, 90, 39, 0.4);
+  --color-zarify-glow: rgba(189, 75, 22, 0.5);
+  --color-capify: #1E3A5F;
+  /* Lifted from #0F2B48 for visibility */
+  --color-capify-glow: rgba(30, 58, 95, 0.6);
+  --color-yuanify: #3D7A34;
+  /* Lifted from #2D5A27 for visibility */
+  --color-yuanify-glow: rgba(61, 122, 52, 0.6);
 
   --color-zarify-ify: #FDB813;
   --color-capify-ify: #60A5FA;
