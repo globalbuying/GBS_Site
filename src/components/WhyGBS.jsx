@@ -132,12 +132,17 @@ const WhyGBS = () => {
         }
         
         .brand-ify {
-          color: var(--color-ify);
+          /* font-style is italic from index.css */
         }
         
         .zarify-brand .brand-main { color: var(--color-zarify); }
+        .zarify-brand .brand-ify { color: var(--color-zarify-ify); }
+
         .capify-brand .brand-main { color: var(--color-capify); }
+        .capify-brand .brand-ify { color: var(--color-capify-ify); }
+
         .yuanify-brand .brand-main { color: var(--color-yuanify); }
+        .yuanify-brand .brand-ify { color: var(--color-yuanify-ify); }
 
         .why-gbs__block {
           margin-bottom: 2rem;

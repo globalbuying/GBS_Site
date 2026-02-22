@@ -73,7 +73,9 @@ const ZarifyDeepDive = () => {
           <div className="zdd-hero-layout">
             <div className="zdd-hero-text">
               <h2 className="zdd-hero-title">
-                <span className="zarify-text">Zarify</span>
+                <span className="product-brand zarify-brand">
+                  <span className="brand-main">Zar</span><span className="brand-ify">ify</span>
+                </span>
                 <span className="zdd-hero-tagline">Save Every Time You Trade</span>
               </h2>
               <p className="zdd-hero-sub">
@@ -205,7 +207,7 @@ const ZarifyDeepDive = () => {
             <div className="zdd-pathway-text">
               <h3 className="zdd-section-heading">The Staged Pathway to Global Autonomy</h3>
               <p className="zdd-body">
-                Zarify is your on-ramp—solving immediate inefficiencies and lowering costs. As your business grows in scale and complexity, we offer a strategic upgrade to <strong className="capify-accent">Capify</strong>, helping you establish your own dedicated offshore buying office to build hard currency reserves and access global finance.
+                Zarify is your on-ramp—solving immediate inefficiencies and lowering costs. As your business grows in scale and complexity, we offer a strategic upgrade to <strong className="product-brand capify-brand"><span className="brand-main">Cap</span><span className="brand-ify">ify</span></strong>, helping you establish your own dedicated offshore buying office to build hard currency reserves and access global finance.
               </p>
             </div>
             <Link to="/capify" className="btn-learn-more zdd-pathway-btn">Discover Capify →</Link>
@@ -256,9 +258,11 @@ const ZarifyDeepDive = () => {
           display: flex;
           flex-direction: column;
         }
-        .zarify-text {
-          color: var(--color-capify);
+        .product-brand {
+          font-weight: 700;
         }
+        .zarify-brand .brand-main { color: var(--color-zarify); }
+        .zarify-brand .brand-ify { color: var(--color-zarify-ify); }
         .zdd-hero-tagline {
           font-size: 0.5em;
           color: var(--text-muted);

@@ -101,7 +101,9 @@ const CapifyDeepDive = () => {
           <div className="cdd-hero-layout">
             <div className="cdd-hero-text">
               <h2 className="cdd-hero-title">
-                <span className="cdd-capify-text">Capify</span>
+                <span className="product-brand capify-brand">
+                  <span className="brand-main">Cap</span><span className="brand-ify">ify</span>
+                </span>
                 <span className="cdd-hero-tagline">Build a Global Trade Backbone</span>
               </h2>
               <p className="cdd-hero-sub">
@@ -193,7 +195,7 @@ const CapifyDeepDive = () => {
             <div className="cdd-pathway-text">
               <h3 className="cdd-section-heading">Start with Zarify, Scale with Capify</h3>
               <p className="cdd-body">
-                Zarify is the tactical on-ramp—solving immediate cost inefficiencies for South African importers. As your business grows in scale and complexity, Capify is the natural strategic upgrade to build a fully capitalised global trade operation.
+                <strong className="product-brand zarify-brand"><span className="brand-main">Zar</span><span className="brand-ify">ify</span></strong> is the tactical on-ramp—solving immediate cost inefficiencies for South African importers. As your business grows in scale and complexity, <strong className="product-brand capify-brand"><span className="brand-main">Cap</span><span className="brand-ify">ify</span></strong> is the natural strategic upgrade to build a fully capitalised global trade operation.
               </p>
             </div>
             <Link to="/zarify" className="btn-learn-more cdd-pathway-btn">Discover Zarify →</Link>
@@ -244,9 +246,11 @@ const CapifyDeepDive = () => {
           display: flex;
           flex-direction: column;
         }
-        .cdd-capify-text {
-          color: var(--color-capify);
+        .product-brand {
+          font-weight: 700;
         }
+        .capify-brand .brand-main { color: var(--color-capify); }
+        .capify-brand .brand-ify { color: var(--color-capify-ify); }
         .cdd-hero-tagline {
           font-size: 0.5em;
           color: var(--text-muted);

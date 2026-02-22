@@ -159,7 +159,7 @@ const Hero = () => {
 
         /* Bottom Banner - Condensed to ensure fold visibility */
         .hero__banner {
-          background: #0D212A;
+          background: #0B3041;
           color: #fff;
           padding: 3rem 0;
           text-align: center;

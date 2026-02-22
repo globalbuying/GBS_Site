@@ -39,7 +39,7 @@ const YuanifyPage = () => {
                     font-weight: 700;
                 }
                 .brand-yuan { color: var(--color-yuanify); }
-                .brand-ify { color: var(--color-ify); }
+                .brand-ify { color: var(--color-yuanify-ify); }
                 
                 .coming-soon__title {
                     font-size: 2.5rem;
