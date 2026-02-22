@@ -15,6 +15,9 @@
   --color-zarify-glow: rgba(20, 184, 166, 0.4);
   --color-capify: #3B82F6;
   --color-capify-glow: rgba(59, 130, 246, 0.4);
+  --color-yuanify: #E53E3E;
+  --color-yuanify-glow: rgba(229, 62, 62, 0.4);
+  --color-ify: #D4A843;
 
   --chrome: #E2E8F0;
   --border: rgba(255, 255, 255, 0.1);
@@ -62,6 +65,11 @@
   --color-capify: #2563EB;
   /* Deeper blue */
   --color-capify-glow: rgba(37, 99, 235, 0.25);
+  --color-yuanify: #C53030;
+  /* Deeper red for light mode */
+  --color-yuanify-glow: rgba(197, 48, 48, 0.2);
+  --color-ify: #B8860B;
+  /* Slightly darker gold for light mode contrast */
 
   --chrome: #334155;
   --border: rgba(0, 0, 0, 0.1);

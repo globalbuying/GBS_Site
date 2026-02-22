@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import HomePage from './pages/HomePage';
 import ZarifyPage from './pages/ZarifyPage';
 import CapifyPage from './pages/CapifyPage';
+import YuanifyPage from './pages/YuanifyPage';
 
 function App() {
   const [theme, setTheme] = useState(() => {
@@ -27,6 +28,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/zarify" element={<ZarifyPage />} />
           <Route path="/capify" element={<CapifyPage />} />
+          <Route path="/yuanify" element={<YuanifyPage />} />
         </Routes>
       </div>
     </Router>
