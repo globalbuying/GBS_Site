@@ -7,7 +7,7 @@ const Hero = () => {
       <div className="hero__main container">
         <div className="hero__content">
           <h1 className="hero__title">
-            The Financial Engine Fueling Lower Landed Costs and Higher Liquidity.
+            The Procurement Engine Fueling Lower Landed Costs and Higher Liquidity.
           </h1>
 
           <div className="hero__sub">
