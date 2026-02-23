@@ -1,55 +1,55 @@
 import React from 'react';
 
 const ImplementationSection = () => {
-    return (
-        <section className="implementation">
-            <div className="container">
-                <div className="implementation__header">
-                    <h2 className="implementation__title">Ease of Implementation</h2>
-                    <div className="implementation__quote-box">
-                        <p className="implementation__quote">
-                            "You always know how value is created, <span className="highlight-text">where savings originate</span>, and how liquidity is unlocked."
-                        </p>
-                    </div>
-                    <p className="implementation__intro">
-                        Implementing GBS is intentionally simple. Our processes are designed to integrate seamlessly into your existing operations with minimal disruption and maximum clarity.
-                    </p>
-                </div>
+  return (
+    <section className="implementation">
+      <div className="container">
+        <div className="implementation__header">
+          <h2 className="implementation__title">Ease of Implementation</h2>
+          <div className="implementation__quote-box">
+            <p className="implementation__quote">
+              "You always know how value is created, <span className="highlight-text">where savings originate</span>, and how liquidity is unlocked."
+            </p>
+          </div>
+          <p className="implementation__intro">
+            Implementing GBS is intentionally simple. Our processes are designed to integrate seamlessly into your existing operations with minimal disruption and maximum clarity.
+          </p>
+        </div>
 
-                <div className="implementation__grid">
-                    <div className="implementation__card">
-                        <div className="card-icon">01</div>
-                        <h3>Tried & Tested Onboarding</h3>
-                        <p>A proven framework developed through years of working with South African importers. We handle the complexity so your team doesn't have to.</p>
-                    </div>
+        <div className="implementation__grid">
+          <div className="implementation__card">
+            <div className="card-icon">01</div>
+            <h3>Tried & Tested Onboarding</h3>
+            <p>A proven framework developed through years of working with South African importers. We handle the complexity so your team doesn't have to.</p>
+          </div>
 
-                    <div className="implementation__card">
-                        <div className="card-icon">02</div>
-                        <h3>Lightest Touch Possible</h3>
-                        <p>Our model requires no structural changes. You continue importing as usual—GBS slots in with the smallest operational footprint.</p>
-                    </div>
+          <div className="implementation__card">
+            <div className="card-icon">02</div>
+            <h3>Lightest Touch Possible</h3>
+            <p>Our model requires no structural changes. You continue importing as usual—GBS slots in with the smallest operational footprint.</p>
+          </div>
 
-                    <div className="implementation__card">
-                        <div className="card-icon">03</div>
-                        <h3>Aligned to Workflows</h3>
-                        <p>Built to work with your current procurement, finance, and supply chain processes. No new systems. No additional headcount.</p>
-                    </div>
+          <div className="implementation__card">
+            <div className="card-icon">03</div>
+            <h3>Aligned to Workflows</h3>
+            <p>Built to work with your current procurement, finance, and supply chain processes. No new systems. No additional headcount.</p>
+          </div>
 
-                    <div className="implementation__card">
-                        <div className="card-icon">04</div>
-                        <h3>Logistics Partnerships</h3>
-                        <p>We collaborate directly with your existing logistics providers and clearing agents, ensuring zero interruption to shipment flows.</p>
-                    </div>
+          <div className="implementation__card">
+            <div className="card-icon">04</div>
+            <h3>Logistics Partnerships</h3>
+            <p>We collaborate directly with your existing logistics providers and clearing agents, ensuring zero interruption to shipment flows.</p>
+          </div>
 
-                    <div className="implementation__card">
-                        <div className="card-icon">05</div>
-                        <h3>Fully Transparent</h3>
-                        <p>Transparency is core to our approach—every transaction, rate, and cost component is completely visible and auditable.</p>
-                    </div>
-                </div>
-            </div>
+          <div className="implementation__card">
+            <div className="card-icon">05</div>
+            <h3>Fully Transparent</h3>
+            <p>Transparency is core to our approach—every transaction, rate, and cost component is completely visible and auditable.</p>
+          </div>
+        </div>
+      </div>
 
-            <style>{`
+      <style>{`
         .implementation {
           padding: var(--section-spacing) 0;
           background-color: var(--bg-primary);
@@ -69,44 +69,55 @@ const ImplementationSection = () => {
         }
 
         .implementation__header {
-          max-width: 900px;
-          margin-bottom: 5rem;
+          max-width: 1000px;
+          margin-bottom: 6rem;
         }
 
         .implementation__title {
-          font-size: 0.9rem;
-          text-transform: uppercase;
-          letter-spacing: 0.2em;
-          color: var(--color-ify);
+          font-size: clamp(2.5rem, 6vw, 4rem);
+          color: var(--text-primary);
           margin-bottom: 2rem;
-          font-weight: 600;
+          font-weight: 800;
+          letter-spacing: -0.02em;
+          line-height: 1.1;
         }
 
         .implementation__quote-box {
-          margin-bottom: 2.5rem;
+          margin-bottom: 3rem;
           position: relative;
+          padding: 2.5rem;
+          background: rgba(255, 255, 255, 0.03);
+          border-left: 4px solid var(--color-zarify);
+          border-radius: 0 16px 16px 0;
+          box-shadow: 20px 0 50px -20px var(--color-zarify-glow);
         }
 
         .implementation__quote {
-          font-size: clamp(2rem, 5vw, 3.5rem);
-          line-height: 1.2;
-          font-weight: 700;
+          font-size: clamp(1.4rem, 3vw, 2rem);
+          line-height: 1.4;
+          font-weight: 600;
           color: var(--text-primary);
-          letter-spacing: -0.03em;
+          font-style: italic;
+          opacity: 0.95;
         }
 
         .highlight-text {
-          background: linear-gradient(120deg, var(--color-zarify), var(--color-capify));
+          background: linear-gradient(120deg, var(--color-zarify), var(--color-capify-ify));
           -webkit-background-clip: text;
           background-clip: text;
           color: transparent;
+          font-style: normal;
+          font-weight: 800;
         }
 
         .implementation__intro {
-          font-size: 1.2rem;
+          font-size: 1.15rem;
           color: var(--text-secondary);
-          line-height: 1.6;
-          max-width: 700px;
+          line-height: 1.7;
+          max-width: 800px;
+          margin-top: 2rem;
+          border-left: 1px solid var(--border);
+          padding-left: 1.5rem;
         }
 
         .implementation__grid {
@@ -168,8 +179,8 @@ const ImplementationSection = () => {
           }
         }
       `}</style>
-        </section>
-    );
+    </section>
+  );
 };
 
 export default ImplementationSection;

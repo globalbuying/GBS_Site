@@ -52,6 +52,7 @@ const Navbar = ({ theme, toggleTheme }) => {
           <li><Link to="/" onClick={() => { setMobileOpen(false); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>Home</Link></li>
           <li><Link to="/zarify" onClick={() => setMobileOpen(false)}>Zarify</Link></li>
           <li><Link to="/capify" onClick={() => setMobileOpen(false)}>Capify</Link></li>
+          <li><Link to="/yuanify" onClick={() => setMobileOpen(false)}>Yuanify</Link></li>
           <li><a href="#technology" onClick={(e) => handleNav(e, 'technology')}>Technology</a></li>
           <li>
             <button
@@ -126,6 +127,7 @@ const Navbar = ({ theme, toggleTheme }) => {
         <Link to="/" onClick={() => { setMobileOpen(false); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>Home</Link>
         <Link to="/zarify" onClick={() => setMobileOpen(false)}>Zarify</Link>
         <Link to="/capify" onClick={() => setMobileOpen(false)}>Capify</Link>
+        <Link to="/yuanify" onClick={() => setMobileOpen(false)}>Yuanify</Link>
         <a href="#technology" onClick={(e) => handleNav(e, 'technology')}>Technology</a>
         <a href="#contact" onClick={(e) => handleNav(e, 'contact')} className="navbar__cta">Get in Touch</a>
       </div>

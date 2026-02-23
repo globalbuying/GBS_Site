@@ -57,7 +57,7 @@ const WhyGBS = () => {
             <div className="why-gbs__content">
               <div className="why-gbs__block">
                 <h4>Challenge</h4>
-                <p>Suppliers invoicing in USD uplift their invoices to mitigate USD volatility.</p>
+                <p>Chinese suppliers invoicing in USD uplift their invoices to mitigate USD volatility.</p>
               </div>
               <div className="why-gbs__block">
                 <h4>Solution</h4>
