@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import yuanifyImg from '../assets/yuanify.png';
+import yuanifyImg from '../assets/yuanify.webp';
 
 const FAQItem = ({ question, answer }) => {
   const [open, setOpen] = useState(false);
