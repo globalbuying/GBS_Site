@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import zarifyImg from '../assets/zarify.png';
+import zarifyImg from '../assets/zarify.webp';
 
 const ZarifySection = () => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import capifyImg from '../assets/capify.png';
+import capifyImg from '../assets/capify.webp';
 
 const CapifySection = () => {
   return (

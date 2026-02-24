@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import capifyImg from '../assets/capify.png';
+import capifyImg from '../assets/capify.webp';
 
 const FAQItem = ({ question, answer }) => {
   const [open, setOpen] = useState(false);

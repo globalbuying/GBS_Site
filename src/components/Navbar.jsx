@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import logoForLight from '../assets/logo-for-light.png';
-import logoForDark from '../assets/logo-for-dark.png';
+import logoForLight from '../assets/logo-for-light.webp';
+import logoForDark from '../assets/logo-for-dark.webp';
 
 const Navbar = ({ theme, toggleTheme }) => {
   const [scrolled, setScrolled] = useState(false);
