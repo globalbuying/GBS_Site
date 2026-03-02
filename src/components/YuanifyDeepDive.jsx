@@ -238,13 +238,7 @@ const YuanifyDeepDive = () => {
         </div>
       </div>
 
-      {/* ── Bottom CTA ── */}
-      <div className="ydd-block ydd-cta-block">
-        <div className="container ydd-center-header">
-          <p className="ydd-cta-tagline">Stop subsidising currency risk. Start capturing the discount your business deserves.</p>
-          <a href="#contact" className="btn-learn-more yuanify-btn ydd-cta-btn">Calculate Your Savings Today</a>
-        </div>
-      </div>
+
 
       <style>{`
         /* ── Section wrapper ── */

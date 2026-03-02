@@ -73,7 +73,7 @@ const ZarifyDeepDive = () => {
     },
     {
       q: 'Is this structure fully legal and compliant?',
-      a: 'Absolutely. Zarify is built on an extensive legal framework reviewed by major institutions like Standard Bank and ABSA. We are fully SARS and SARB compliant, ensuring all transactions are executed within a framework that satisfies both local and international standards.',
+      a: 'Absolutely. Zarify is built on an extensive legal framework reviewed by major institutions like Standard Bank and ABSA. We are fully Customs and Reserve Bank compliant, ensuring all transactions are executed within a framework that satisfies both local and international standards.',
     },
     {
       q: 'Can I speak to my accountant about this?',
@@ -257,13 +257,7 @@ const ZarifyDeepDive = () => {
         </div>
       </div>
 
-      {/* ── Bottom CTA ── */}
-      <div className="zdd-block zdd-cta-block">
-        <div className="container zdd-center-header">
-          <p className="zdd-cta-tagline">The future of global trade systems is here. Don't just move money—reshape how you trade.</p>
-          <a href="#contact" className="btn-learn-more zarify-btn zdd-cta-btn">Calculate Your Savings Today</a>
-        </div>
-      </div>
+
 
       <style>{`
         /* ── Section wrapper ── */

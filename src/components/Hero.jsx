@@ -10,11 +10,34 @@ const Hero = () => {
             We help importers to
           </h1>
 
-          <ul className="hero__list hero__list--primary">
-            <li>significantly reduce landed costs</li>
-            <li>build offshore reserves</li>
-            <li>unlock cash tied up in working capital</li>
-          </ul>
+          <div className="hero__pillars">
+            <div className="hero__pillar">
+              <div className="hero__pillar-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M23 6l-9.5 9.5-5-5L1 18" />
+                  <path d="M17 6h6v6" />
+                </svg>
+              </div>
+              <span>Significantly reduce landed costs</span>
+            </div>
+            <div className="hero__pillar">
+              <div className="hero__pillar-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+              </div>
+              <span>Build offshore reserves</span>
+            </div>
+            <div className="hero__pillar">
+              <div className="hero__pillar-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 11-7.778 7.778 5.5 5.5 0 017.778-7.778z" />
+                  <path d="M12 12l8.5 8.5M20 10l2 2m-2 0l2-2" />
+                </svg>
+              </div>
+              <span>Unlock cash tied up in working capital</span>
+            </div>
+          </div>
 
           <p className="hero__tagline">
             The Procurement Engine Fueling Lower Landed Costs and Higher Liquidity.
@@ -68,51 +91,98 @@ const Hero = () => {
           max-width: 650px;
         }
 
+        .hero__intro {
+          font-size: 1.1rem;
+          font-weight: 600;
+          color: #E2AD2C; /* Gold/Primary accent */
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          margin-bottom: 0.75rem;
+          opacity: 0;
+          animation: fadeIn 0.8s ease-out forwards;
+        }
+
         .hero__title {
           font-family: var(--font-display);
-          font-size: clamp(2.2rem, 5vw, 3.5rem);
-          font-weight: 800;
-          line-height: 1.1;
-          margin-bottom: 2rem;
+          font-size: clamp(2.5rem, 6vw, 4rem);
+          font-weight: 850;
+          line-height: 1.05;
+          margin-bottom: 2.5rem;
           color: var(--text-primary);
+          letter-spacing: -0.02em;
+          background: linear-gradient(135deg, #0B3041 0%, #1a4d66 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          opacity: 0;
+          animation: fadeInUp 0.8s ease-out 0.2s forwards;
         }
 
-        .hero__list--primary {
-          margin-bottom: 2rem;
-          font-size: 1.35rem;
-          color: var(--text-primary);
+        .hero__pillars {
+          display: flex;
+          flex-direction: column;
+          gap: 1.25rem;
+          margin-bottom: 3rem;
         }
 
-        .hero__list--primary li {
-          margin-bottom: 0.75rem;
-          font-weight: 600;
+        .hero__pillar {
+          display: flex;
+          align-items: center;
+          gap: 1.25rem;
+          font-size: 1.5rem;
+          font-weight: 500;
+          color: #4A5568;
+          opacity: 0;
+          animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        .hero__pillar:nth-child(1) { animation-delay: 0.4s; }
+        .hero__pillar:nth-child(2) { animation-delay: 0.5s; }
+        .hero__pillar:nth-child(3) { animation-delay: 0.6s; }
+
+        .hero__pillar-icon-box {
+          width: 48px;
+          height: 48px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: rgba(226, 173, 44, 0.1);
+          color: #E2AD2C;
+          border-radius: 12px;
+          flex-shrink: 0;
+          transition: all 0.3s ease;
+        }
+
+        .hero__pillar:hover .hero__pillar-icon-box {
+          background: #E2AD2C;
+          color: #fff;
+          transform: scale(1.1) rotate(5deg);
+        }
+
+        .hero__pillar-icon-box svg {
+          width: 22px;
+          height: 22px;
         }
 
         .hero__tagline {
           font-size: 1.15rem;
-          margin-bottom: 2.5rem;
-          color: var(--text-secondary);
-          max-width: 500px;
           line-height: 1.6;
-        }
-
-        .hero__list {
-          list-style: none;
-          padding: 0;
-        }
-
-        .hero__list li {
-          margin-bottom: 0.5rem;
-          position: relative;
+          color: var(--text-secondary);
+          max-width: 520px;
+          margin-bottom: 2.5rem;
           padding-left: 1.5rem;
-          font-weight: 400;
+          border-left: 3px solid #E2AD2C;
+          opacity: 0;
+          animation: fadeIn 1s ease-out 0.8s forwards;
         }
 
-        .hero__list li::before {
-          content: '-';
-          position: absolute;
-          left: 0;
-          font-weight: 600;
+        @keyframes fadeInUp {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
         }
 
         .hero__cta {
