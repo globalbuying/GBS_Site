@@ -1,5 +1,5 @@
 import React from 'react';
-import deskmanImg from '../assets/hero-deskman2.webp';
+import heroVisionImg from '../assets/hero-vision.png';
 
 const Hero = () => {
   return (
@@ -50,7 +50,7 @@ const Hero = () => {
 
         <div className="hero__visual">
           <div className="hero__image-container">
-            <img src={deskmanImg} alt="Business Professional working on laptop" className="hero__image" />
+            <img src={heroVisionImg} alt="GBS Global Trade Vision" className="hero__image" />
           </div>
         </div>
       </div>
