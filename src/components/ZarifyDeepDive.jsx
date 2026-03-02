@@ -32,7 +32,7 @@ const ZarifyDeepDive = () => {
     {
       num: '03',
       title: 'Automated Compliance',
-      desc: 'The Smart Document Hub generates SARS-ready paperwork and maintains a single-source audit trail automatically.',
+      desc: 'The Smart Document Hub generates Customs-ready paperwork and maintains a single-source audit trail automatically.',
     },
     {
       num: '04',
@@ -107,7 +107,7 @@ const ZarifyDeepDive = () => {
               </p>
 
               <ul className="zdd-feature-list">
-                <li><span className="zdd-check">✓</span> <span>Avoid SARS Exchange Rate Uplifts</span></li>
+                <li><span className="zdd-check">✓</span> <span>Avoid Customs Exchange Rate Uplifts</span></li>
                 <li><span className="zdd-check">✓</span> <span>Simplify Foreign Payments</span></li>
                 <li><span className="zdd-check">✓</span> <span>No Extensive KYC Required</span></li>
               </ul>
@@ -132,7 +132,7 @@ const ZarifyDeepDive = () => {
               <h3 className="zdd-section-heading">The Challenge</h3>
               <h4 className="zdd-sub-heading">A Cost You Never Agreed To</h4>
               <p className="zdd-body">
-                Picture this: you've negotiated the best possible price with your overseas supplier, arranged shipping, and processed your order. Then SARS applies its own exchange rate—one that's <strong>artificially higher than the market rate</strong>—to calculate your import duties and VAT. Overnight, your carefully negotiated deal just got more expensive, and there's nothing in the current process you can do about it.
+                Picture this: you've negotiated the best possible price with your overseas supplier, arranged shipping, and processed your order. Then Customs applies its own exchange rate—one that's <strong>artificially higher than the market rate</strong>—to calculate your import duties and VAT. Overnight, your carefully negotiated deal just got more expensive, and there's nothing in the current process you can do about it.
               </p>
               <p className="zdd-body" style={{ marginTop: '1rem' }}>
                 For mid-market importers processing <strong>R10 million to R100 million</strong> in foreign purchases annually, this hidden uplift compounds into hundreds of thousands of rands lost every year—money that should be fuelling growth, not inflating a tax base.
@@ -141,7 +141,7 @@ const ZarifyDeepDive = () => {
             <div className="zdd-col-callout">
               <div className="zdd-callout-card">
                 <span className="zdd-callout-icon">⚠</span>
-                <p>SARS applies an <strong>artificially inflated exchange rate</strong>, meaning you pay duties and VAT on values higher than the real cost of your goods—eroding your margins on every single shipment.</p>
+                <p>Customs applies an <strong>artificially inflated exchange rate</strong>, meaning you pay duties and VAT on values higher than the real cost of your goods—eroding your margins on every single shipment.</p>
               </div>
             </div>
           </div>
@@ -156,7 +156,7 @@ const ZarifyDeepDive = () => {
               <h3 className="zdd-section-heading">The Solution</h3>
               <h4 className="zdd-sub-heading">Here's What Changes When You Zarify</h4>
               <p className="zdd-body">
-                Instead of paying your supplier in foreign currency and letting SARS mark up the rate, <strong>Zarify</strong> steps into the trade flow. We purchase the goods from your international supplier and issue a <strong>Rand-denominated invoice</strong> to your South African entity. Because the transaction is now in ZAR, there's no foreign exchange for SARS to "uplift."
+                Instead of paying your supplier in foreign currency and letting Customs mark up the rate, <strong>Zarify</strong> steps into the trade flow. We purchase the goods from your international supplier and issue a <strong>Rand-denominated invoice</strong> to your South African entity. Because the transaction is now in ZAR, there's no foreign exchange for Customs to "uplift."
               </p>
               <p className="zdd-body" style={{ marginTop: '1rem' }}>
                 The result? Duties and VAT are calculated on the <strong>real value</strong> of your goods—not an inflated fiction. Your landed cost drops, your cash flow improves, and your compliance is handled automatically.

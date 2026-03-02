@@ -19,7 +19,7 @@ const Hero = () => {
             </ul>
           </div>
 
-          <a href="#contact" className="hero__cta">
+          <a href="#why-gbs" className="hero__cta">
             Explore GBS Solutions <span>&gt;</span>
           </a>
         </div>

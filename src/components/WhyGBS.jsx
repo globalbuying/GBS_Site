@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const WhyGBS = () => {
   return (
-    <section className="why-gbs">
+    <section className="why-gbs" id="why-gbs">
       <div className="container">
         <div className="why-gbs__header">
           <h2 className="why-gbs__title">Why Importers Partner with GBS</h2>

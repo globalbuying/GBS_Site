@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
 import ContactModal from './ContactModal';
 
-const ContactCTA = () => {
+const ContactCTA = ({
+  title = "Ready to build Hard Currency Reserves You Control?",
+  description = "Join leading businesses transforming their global engagement with Global Buying Solutions."
+}) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <footer id="contact" className="contact-section">
       <div className="container center-content">
-        <h2 className="cta-title">Ready to build Hard Currency Reserves You Control?</h2>
+        <h2 className="cta-title">{title}</h2>
         <p className="cta-description">
-          Join leading businesses transforming their global engagement with Global Buying Solutions.
+          {description}
         </p>
 
         <button

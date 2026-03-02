@@ -13,10 +13,10 @@ const ZarifyPage = () => {
     <main className="zarify-page">
       <Helmet>
         <title>Zarify | Reduce Landed Costs | Global Buying Solutions</title>
-        <meta name="description" content="Stop overpaying on customs exchange rates. Zarify eliminates SARS exchange rate uplifts, reducing your landed costs on every shipment." />
+        <meta name="description" content="Stop overpaying on customs exchange rates. Zarify eliminates Customs exchange rate uplifts, reducing your landed costs on every shipment." />
       </Helmet>
       <ZarifyDeepDive />
-      <ContactCTA />
+      <ContactCTA title="Ready to reduce your Duties and VAT?" />
       <style>{`
         .zarify-page {
           padding-top: 0; /* Navbar is fixed */

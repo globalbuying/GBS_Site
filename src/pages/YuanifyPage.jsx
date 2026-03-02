@@ -16,7 +16,7 @@ const YuanifyPage = () => {
         <meta name="description" content="Eliminate 4% USD volatility premiums by paying Chinese suppliers in Yuan. Yuanify helps South African businesses negotiate discounts and build offshore capital." />
       </Helmet>
       <YuanifyDeepDive />
-      <ContactCTA />
+      <ContactCTA title="Ready to reduce your Landed Costs?" />
       <style>{`
         .yuanify-page {
           padding-top: 0; /* Navbar is fixed */
