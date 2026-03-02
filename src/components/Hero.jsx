@@ -7,17 +7,18 @@ const Hero = () => {
       <div className="hero__main container">
         <div className="hero__content">
           <h1 className="hero__title">
-            The Procurement Engine Fueling Lower Landed Costs and Higher Liquidity.
+            We help importers to
           </h1>
 
-          <div className="hero__sub">
-            <p>We help importers to</p>
-            <ul className="hero__list">
-              <li>significantly reduce landed costs</li>
-              <li>build offshore reserves</li>
-              <li>unlock cash tied up in working capital</li>
-            </ul>
-          </div>
+          <ul className="hero__list hero__list--primary">
+            <li>significantly reduce landed costs</li>
+            <li>build offshore reserves</li>
+            <li>unlock cash tied up in working capital</li>
+          </ul>
+
+          <p className="hero__tagline">
+            The Procurement Engine Fueling Lower Landed Costs and Higher Liquidity.
+          </p>
 
           <a href="#why-gbs" className="hero__cta">
             Explore GBS Solutions <span>&gt;</span>
@@ -69,22 +70,30 @@ const Hero = () => {
 
         .hero__title {
           font-family: var(--font-display);
-          font-size: clamp(1.8rem, 4vw, 3rem);
+          font-size: clamp(2.2rem, 5vw, 3.5rem);
           font-weight: 800;
           line-height: 1.1;
-          margin-bottom: 1.5rem;
+          margin-bottom: 2rem;
           color: var(--text-primary);
         }
 
-        .hero__sub {
-          font-size: 1.15rem;
+        .hero__list--primary {
           margin-bottom: 2rem;
-          color: var(--text-secondary);
+          font-size: 1.35rem;
+          color: var(--text-primary);
         }
 
-        .hero__sub p {
+        .hero__list--primary li {
           margin-bottom: 0.75rem;
           font-weight: 600;
+        }
+
+        .hero__tagline {
+          font-size: 1.15rem;
+          margin-bottom: 2.5rem;
+          color: var(--text-secondary);
+          max-width: 500px;
+          line-height: 1.6;
         }
 
         .hero__list {
