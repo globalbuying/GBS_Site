@@ -226,14 +226,28 @@ const Hero = () => {
           width: 100%;
           max-width: 550px;
           position: relative;
+          border-radius: 16px;
+          overflow: hidden;
+          border: 1px solid rgba(226, 173, 44, 0.2);
+          box-shadow: 0 0 50px -10px rgba(226, 173, 44, 0.15);
+          transition: all 0.5s ease;
+        }
+
+        .hero__image-container:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 15px 60px -15px rgba(226, 173, 44, 0.3);
+          border-color: rgba(226, 173, 44, 0.4);
         }
 
         .hero__image {
           width: 100%;
           height: auto;
           display: block;
-          filter: drop-shadow(0 15px 35px rgba(0,0,0,0.1));
-          transition: transform 0.5s ease;
+          transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .hero__image-container:hover .hero__image {
+          transform: scale(1.04);
         }
 
         /* Bottom Banner - Condensed to ensure fold visibility */
