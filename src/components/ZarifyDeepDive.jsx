@@ -112,7 +112,7 @@ const ZarifyDeepDive = () => {
                 <li><span className="zdd-check">✓</span> <span>No Extensive KYC Required</span></li>
               </ul>
 
-              <a href="#contact" className="btn-learn-more zarify-btn">Calculate Your Savings</a>
+              <a href="#contact" className="btn-learn-more zarify-btn">Enquire about Zarify</a>
             </div>
 
             <div className="zdd-hero-visual">

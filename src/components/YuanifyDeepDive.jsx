@@ -112,7 +112,7 @@ const YuanifyDeepDive = () => {
                 <li><span className="ydd-check">✓</span> <span>Build Offshore Capital Reserves</span></li>
               </ul>
 
-              <a href="#contact" className="btn-learn-more yuanify-btn">Calculate Your Savings</a>
+              <a href="#contact" className="btn-learn-more yuanify-btn">Enquire about Yuanify</a>
             </div>
 
             <div className="ydd-hero-visual">
