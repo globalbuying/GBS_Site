@@ -44,7 +44,7 @@ const Navbar = ({ theme, toggleTheme }) => {
         {/* Logo */}
         <Link to="/" className="navbar__logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
           <img src={currentLogo} alt="Global Buying Solutions" />
-          <span className="navbar__logo-text">Global Buying Solutions Limited</span>
+          <span className="navbar__logo-text">Global Buying Solutions</span>
         </Link>
 
         {/* Desktop Links */}
