@@ -39,6 +39,15 @@
   --hero-grid-line: rgba(255, 255, 255, 0.03);
   --ambient-glow: rgba(20, 184, 166, 0.15);
 
+  /* Hero Specific (Dark - Default) */
+  --hero-title-gradient: linear-gradient(135deg, #fff 0%, #94A3B8 100%);
+  --hero-pillar-text: #CBD5E1;
+  --hero-cta-bg: #fff;
+  --hero-cta-text: #0B1120;
+  --hero-cta-border: #fff;
+  --hero-pillar-icon-bg: rgba(226, 173, 44, 0.15);
+  --hero-tagline-border: #E2AD2C;
+
   /* Typography */
   --font-display: 'Montserrat', sans-serif;
   --font-body: 'Plus Jakarta Sans', sans-serif;
@@ -88,6 +97,15 @@
   --gradient-heading-end: #4A5568;
   --hero-grid-line: rgba(0, 0, 0, 0.04);
   --ambient-glow: rgba(13, 148, 136, 0.08);
+
+  /* Hero Specific (Light) */
+  --hero-title-gradient: linear-gradient(135deg, #0B3041 0%, #1a4d66 100%);
+  --hero-pillar-text: #4A5568;
+  --hero-cta-bg: #fff;
+  --hero-cta-text: #000;
+  --hero-cta-border: #000;
+  --hero-pillar-icon-bg: rgba(226, 173, 44, 0.1);
+  --hero-tagline-border: #E2AD2C;
 }
 
 /* Reset & Base */

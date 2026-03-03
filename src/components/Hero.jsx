@@ -110,7 +110,7 @@ const Hero = () => {
           margin-bottom: 2.5rem;
           color: var(--text-primary);
           letter-spacing: -0.02em;
-          background: linear-gradient(135deg, #0B3041 0%, #1a4d66 100%);
+          background: var(--hero-title-gradient);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           opacity: 0;
@@ -130,7 +130,7 @@ const Hero = () => {
           gap: 1.25rem;
           font-size: 1.5rem;
           font-weight: 500;
-          color: #4A5568;
+          color: var(--hero-pillar-text);
           opacity: 0;
           animation: fadeInUp 0.6s ease-out forwards;
         }
@@ -145,17 +145,19 @@ const Hero = () => {
           display: flex;
           align-items: center;
           justify-content: center;
-          background: rgba(226, 173, 44, 0.1);
+          background: var(--hero-pillar-icon-bg);
           color: #E2AD2C;
           border-radius: 12px;
           flex-shrink: 0;
           transition: all 0.3s ease;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
         .hero__pillar:hover .hero__pillar-icon-box {
           background: #E2AD2C;
           color: #fff;
           transform: scale(1.1) rotate(5deg);
+          box-shadow: 0 8px 20px rgba(226, 173, 44, 0.3);
         }
 
         .hero__pillar-icon-box svg {
@@ -170,7 +172,7 @@ const Hero = () => {
           max-width: 520px;
           margin-bottom: 2.5rem;
           padding-left: 1.5rem;
-          border-left: 3px solid #E2AD2C;
+          border-left: 3px solid var(--hero-tagline-border);
           opacity: 0;
           animation: fadeIn 1s ease-out 0.8s forwards;
         }
@@ -188,14 +190,15 @@ const Hero = () => {
         .hero__cta {
           display: inline-block;
           padding: 0.8rem 2rem;
-          border: 2px solid #000;
-          background: #fff;
-          color: #000;
+          border: 2px solid var(--hero-cta-border);
+          background: var(--hero-cta-bg);
+          color: var(--hero-cta-text);
           font-weight: 700;
           border-radius: 6px;
           transition: all 0.3s ease;
           font-size: 1.05rem;
           font-family: var(--font-display);
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
         .hero__cta span {
@@ -207,7 +210,9 @@ const Hero = () => {
         .hero__cta:hover {
           background: #000;
           color: #fff;
+          border-color: #000;
           transform: translateY(-2px);
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
         }
 
         .hero__cta:hover span {
