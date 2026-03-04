@@ -135,7 +135,7 @@ const CapifyDeepDive = () => {
                 What if every import transaction you processed didn't just cost you money — but built it? Capify gives sophisticated South African importers a permanent structural advantage: your own offshore buying office that earns, holds, and grows hard-currency reserves on every trade.
               </p>
 
-              <a href="#contact" className="btn-learn-more capify-btn">Enquire About Capify</a>
+              <a href="#contact" className="btn-learn-more capify-btn" onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}>Enquire About Capify</a>
             </div>
 
             <div className="cdd-hero-visual">
@@ -293,7 +293,7 @@ const CapifyDeepDive = () => {
       <div className="cdd-block cdd-cta-block">
         <div className="container cdd-center-header">
           <p className="cdd-cta-tagline">Empowering South Africa's mid-market with the tools to thrive in a volatile global economy.</p>
-          <a href="#contact" className="btn-learn-more capify-btn cdd-cta-btn">Enquire About Capify</a>
+          <a href="#contact" className="btn-learn-more capify-btn cdd-cta-btn" onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}>Enquire About Capify</a>
         </div>
       </div>
 

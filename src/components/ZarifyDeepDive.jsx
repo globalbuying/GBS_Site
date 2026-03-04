@@ -112,7 +112,7 @@ const ZarifyDeepDive = () => {
                 <li><span className="zdd-check">✓</span> <span>No Extensive KYC Required</span></li>
               </ul>
 
-              <a href="#contact" className="btn-learn-more zarify-btn">Enquire about Zarify</a>
+              <a href="#contact" className="btn-learn-more zarify-btn" onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}>Enquire about Zarify</a>
             </div>
 
             <div className="zdd-hero-visual">

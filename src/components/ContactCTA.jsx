@@ -19,7 +19,7 @@ const ContactCTA = ({
           className="cta-btn"
           onClick={() => setIsModalOpen(true)}
         >
-          Get In Touch
+          Get in Touch
         </button>
 
         <div className="footer-bottom">
