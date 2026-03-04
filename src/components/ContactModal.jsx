@@ -10,8 +10,10 @@ const ContactModal = ({ isOpen, onClose }) => {
     email: '',
     company: '',
     message: '',
+    honeypot: '', // Hidden field to catch bots
   });
   const [status, setStatus] = useState('idle'); // idle | sending | success | error
+  const [openTime, setOpenTime] = useState(0); // Timestamp when modal opened
   const modalRef = useRef(null);
   const firstInputRef = useRef(null);
   const previousFocusRef = useRef(null);
@@ -19,6 +21,9 @@ const ContactModal = ({ isOpen, onClose }) => {
   // Focus trap & Escape key
   useEffect(() => {
     if (!isOpen) return;
+
+    // Capture the time the modal was opened
+    setOpenTime(Date.now());
 
     // Save the previously focused element
     previousFocusRef.current = document.activeElement;
@@ -65,7 +70,7 @@ const ContactModal = ({ isOpen, onClose }) => {
   }, [isOpen]);
 
   const handleClose = () => {
-    setFormData({ name: '', email: '', company: '', message: '' });
+    setFormData({ name: '', email: '', company: '', message: '', honeypot: '' });
     setStatus('idle');
     onClose();
   };
@@ -79,6 +84,22 @@ const ContactModal = ({ isOpen, onClose }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // 1. Honeypot check: If this hidden field is filled, it's a bot
+    if (formData.honeypot) {
+      console.warn('Bot detected via honeypot');
+      setStatus('success'); // Silently succeed to fool the bot
+      return;
+    }
+
+    // 2. Time-based check: Humans take > 3 seconds to fill this form
+    const timeToSubmit = Date.now() - openTime;
+    if (timeToSubmit < 3000) {
+      console.warn('Submission too fast:', timeToSubmit, 'ms');
+      setStatus('success'); // Silently succeed to fool the bot
+      return;
+    }
+
     setStatus('sending');
 
     const templateParams = {
@@ -95,7 +116,7 @@ const ContactModal = ({ isOpen, onClose }) => {
         templateParams
       );
       setStatus('success');
-      setFormData({ name: '', email: '', company: '', message: '' });
+      setFormData({ name: '', email: '', company: '', message: '', honeypot: '' });
     } catch (err) {
       console.error('EmailJS error:', err);
       setStatus('error');
@@ -142,8 +163,23 @@ const ContactModal = ({ isOpen, onClose }) => {
             )}
 
             <form onSubmit={handleSubmit} className="cm-form" noValidate>
+              {/* HONEYPOT FIELD - Hidden from humans, tempting for bots */}
+              <div style={{ display: 'none' }} aria-hidden="true">
+                <label htmlFor="cm-hp">Do not fill this field</label>
+                <input
+                  type="text"
+                  id="cm-hp"
+                  name="honeypot"
+                  autoComplete="off"
+                  tabIndex="-1"
+                  value={formData.honeypot}
+                  onChange={handleChange}
+                />
+              </div>
+
               <div className="cm-group">
                 <label htmlFor="cm-name">Name *</label>
+
                 <input
                   ref={firstInputRef}
                   type="text"
