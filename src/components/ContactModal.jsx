@@ -1,6 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
+// Initialise EmailJS once at module level
+emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+
 const ContactModal = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({
     name: '',
@@ -89,8 +92,7 @@ const ContactModal = ({ isOpen, onClose }) => {
       await emailjs.send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        templateParams,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        templateParams
       );
       setStatus('success');
       setFormData({ name: '', email: '', company: '', message: '' });
@@ -188,7 +190,7 @@ const ContactModal = ({ isOpen, onClose }) => {
                   id="cm-message"
                   name="message"
                   required
-                  rows="4"
+                  rows="3"
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="How can we help you?"
@@ -233,14 +235,14 @@ const ContactModal = ({ isOpen, onClose }) => {
         .cm-content {
           background: var(--bg-secondary);
           border: 1px solid var(--border);
-          padding: 2.5rem;
+          padding: 2rem 2rem 1.5rem;
           border-radius: 16px;
           width: 100%;
-          max-width: 480px;
+          max-width: 420px;
           position: relative;
           box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
           animation: cmSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-          max-height: 90vh;
+          max-height: 85vh;
           overflow-y: auto;
         }
 
@@ -271,24 +273,24 @@ const ContactModal = ({ isOpen, onClose }) => {
 
         /* ── Typography ── */
         .cm-content h3 {
-          font-size: 1.75rem;
-          margin-bottom: 0.5rem;
+          font-size: 1.5rem;
+          margin-bottom: 0.35rem;
           color: var(--text-primary);
           font-family: var(--font-display);
         }
 
         .cm-subtitle {
           color: var(--text-secondary);
-          margin-bottom: 2rem;
-          font-size: 1rem;
-          line-height: 1.6;
+          margin-bottom: 1.25rem;
+          font-size: 0.9rem;
+          line-height: 1.5;
         }
 
         /* ── Form ── */
         .cm-form {
           display: flex;
           flex-direction: column;
-          gap: 1.25rem;
+          gap: 0.85rem;
         }
 
         .cm-group {
@@ -299,9 +301,9 @@ const ContactModal = ({ isOpen, onClose }) => {
 
         .cm-group label {
           display: block;
-          margin-bottom: 0.5rem;
+          margin-bottom: 0.3rem;
           color: var(--text-primary);
-          font-size: 0.9rem;
+          font-size: 0.85rem;
           font-weight: 500;
           font-family: var(--font-display);
         }
@@ -309,7 +311,7 @@ const ContactModal = ({ isOpen, onClose }) => {
         .cm-group input,
         .cm-group textarea {
           width: 100%;
-          padding: 0.8rem 1rem;
+          padding: 0.65rem 0.85rem;
           border-radius: 8px;
           background: var(--bg-primary);
           border: 1px solid var(--border);
@@ -340,9 +342,9 @@ const ContactModal = ({ isOpen, onClose }) => {
         /* ── Buttons ── */
         .cm-btn {
           width: 100%;
-          padding: 0.9rem 2rem;
+          padding: 0.75rem 2rem;
           font-weight: 600;
-          font-size: 1rem;
+          font-size: 0.95rem;
           font-family: var(--font-display);
           border: none;
           border-radius: 8px;
@@ -453,12 +455,12 @@ const ContactModal = ({ isOpen, onClose }) => {
         /* ── Responsive ── */
         @media (max-width: 600px) {
           .cm-content {
-            padding: 2rem 1.5rem;
-            max-height: 95vh;
+            padding: 1.5rem 1.25rem;
+            max-height: 90vh;
             border-radius: 12px;
           }
           .cm-content h3 {
-            font-size: 1.4rem;
+            font-size: 1.25rem;
           }
         }
       `}</style>
