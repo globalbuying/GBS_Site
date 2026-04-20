@@ -99,7 +99,7 @@ const YuanifyDeepDive = () => {
                 </span>
               </h2>
               <div className="ydd-headline-stat">
-                <span className="ydd-headline-number">Up to 3%</span>
+                <span className="ydd-headline-number">Up to 10%</span>
                 <span className="ydd-headline-label">Discount on Every Shipment</span>
               </div>
               <p className="ydd-hero-sub">
@@ -130,9 +130,9 @@ const YuanifyDeepDive = () => {
           <div className="ydd-two-col">
             <div className="ydd-col-text">
               <h3 className="ydd-section-heading">The Challenge</h3>
-              <h4 className="ydd-sub-heading">The Hidden 4% Uplift on Every Purchase Order</h4>
+              <h4 className="ydd-sub-heading">The Hidden Uplift on Every Purchase Order</h4>
               <p className="ydd-body">
-                Picture this: you've negotiated the best possible price with your Chinese supplier, agreed on terms, and placed your order. But there's a cost you never see on the invoice—a <strong>4% uplift baked into every USD price</strong> to protect the supplier against USD/CNY exchange rate swings.
+                Picture this: you've negotiated the best possible price with your Chinese supplier, agreed on terms, and placed your order. But there's a cost you never see on the invoice—a <strong>significant uplift baked into every USD price</strong> to protect the supplier against USD/CNY exchange rate swings.
               </p>
               <p className="ydd-body" style={{ marginTop: '1rem' }}>
                 Your supplier doesn't want dollars. They want <strong>Yuan</strong>—to pay their workers, their raw material vendors, their landlords. Every time you pay in USD, they're forced to convert, absorbing the risk of currency fluctuation. To cover that risk, they quietly inflate your price. It's an invisible tax that compounds across every purchase order, every supplier, every year.
@@ -141,7 +141,7 @@ const YuanifyDeepDive = () => {
             <div className="ydd-col-callout">
               <div className="ydd-callout-card">
                 <span className="ydd-callout-icon">⚠</span>
-                <p>Chinese suppliers add an estimated <strong>4% premium</strong> to USD invoices to hedge against exchange rate volatility—a hidden cost that erodes your margins on every single shipment.</p>
+                <p>Chinese suppliers add an estimated <strong>5-10% premium</strong> to USD invoices to hedge against exchange rate volatility—a hidden cost that erodes your margins on every single shipment.</p>
               </div>
             </div>
           </div>
@@ -159,12 +159,12 @@ const YuanifyDeepDive = () => {
                 Instead of paying in USD and absorbing the hidden mark-up, <strong>Yuanify</strong> enables your Chinese suppliers to invoice and be paid in their home currency—<strong>Chinese Yuan (CNY)</strong>. When a supplier knows they'll receive Yuan directly, the need for a volatility buffer disappears entirely.
               </p>
               <p className="ydd-body" style={{ marginTop: '1rem' }}>
-                The result? Suppliers willingly pass the saving back as a <strong>discount of up to 3%</strong> on your purchase orders. Over the course of a year, across multiple suppliers, that discount compounds into significant capital—capital that stays in your business and fuels growth.
+                The result? Suppliers willingly pass the saving back as a <strong>discount of up to 10%</strong> on your purchase orders. Over the course of a year, across multiple suppliers, that discount compounds into significant capital—capital that stays in your business and fuels growth.
               </p>
             </div>
             <div className="ydd-col-callout">
               <div className="ydd-stat-badge">
-                <span className="ydd-stat-number">Up to 3%</span>
+                <span className="ydd-stat-number">Up to 10%</span>
                 <span className="ydd-stat-label">Discount negotiated back from supplier pricing per shipment</span>
               </div>
             </div>
