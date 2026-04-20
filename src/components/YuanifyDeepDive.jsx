@@ -69,7 +69,7 @@ const YuanifyDeepDive = () => {
     },
     {
       q: 'Will my suppliers actually accept Yuan and offer a discount?',
-      a: 'Chinese suppliers overwhelmingly prefer receiving Yuan. USD payments expose them to conversion costs and exchange rate risk, which is exactly why they add the 4% buffer. Removing that risk makes the discount a straightforward negotiation.',
+      a: 'Chinese suppliers overwhelmingly prefer receiving Yuan. USD payments expose them to conversion costs and exchange rate risk, which is exactly why they add a volatility buffer. Removing that risk makes the discount a straightforward negotiation.',
     },
     {
       q: 'How does this help me build offshore capital?',
@@ -103,7 +103,7 @@ const YuanifyDeepDive = () => {
                 <span className="ydd-headline-label">Discount on Every Shipment</span>
               </div>
               <p className="ydd-hero-sub">
-                Your Chinese suppliers are charging you a 4% USD volatility premium. Yuanify removes it—automatically, compliantly, and from your very first transaction.
+                Your Chinese suppliers are charging you a USD volatility premium. Yuanify removes it—automatically, compliantly, and from your very first transaction.
               </p>
 
               <ul className="ydd-feature-list">
