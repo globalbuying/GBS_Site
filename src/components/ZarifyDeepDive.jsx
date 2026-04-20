@@ -99,7 +99,7 @@ const ZarifyDeepDive = () => {
                 </span>
               </h2>
               <div className="zdd-headline-stat">
-                <span className="zdd-headline-number">1%</span>
+                <span className="zdd-headline-number">Up to 2%</span>
                 <span className="zdd-headline-label">Reduction in Landed Cost</span>
               </div>
               <p className="zdd-hero-sub">
@@ -164,7 +164,7 @@ const ZarifyDeepDive = () => {
             </div>
             <div className="zdd-col-callout">
               <div className="zdd-stat-badge">
-                <span className="zdd-stat-number">1%</span>
+                <span className="zdd-stat-number">Up to 2%</span>
                 <span className="zdd-stat-label">Average reduction in total landed cost per shipment</span>
               </div>
             </div>
